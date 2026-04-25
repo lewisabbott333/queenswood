@@ -9,9 +9,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { setPageSEO, organizationSchema, websiteSchema, localBusinessSchema, SITE_URL } from '@/lib/seo';
 
-const ServiceIcon = ({ children }: { children: React.ReactNode }) => (
+const ServiceIcon = ({ children, bgColor = '#f8e71c' }: { children: React.ReactNode; bgColor?: string }) => (
   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-    style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
+    style={{ background: bgColor, border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
     {children}
   </div>
 );
@@ -25,6 +25,7 @@ const services = [
     description:
       'We connect infrastructure projects with local communities, building relationships built on trust and transparency.',
     href: '/what-we-do',
+    bgColor: '#fff100',
   },
   {
     icon: <Network size={22} />,
@@ -32,6 +33,7 @@ const services = [
     description:
       'Expert management of complex multi-stakeholder environments, navigating competing interests with skill.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <Camera size={22} fill="currentColor" />,
@@ -39,6 +41,7 @@ const services = [
     description:
       'Bringing complex infrastructure information to life through compelling visual content.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <MessageSquare size={22} fill="currentColor" />,
@@ -46,6 +49,7 @@ const services = [
     description:
       'Rigorous, inclusive consultation processes that exceed regulatory requirements.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <Tractor size={22} fill="currentColor" />,
@@ -53,6 +57,7 @@ const services = [
     description:
       'Specialist engagement with landowners and farming communities across major linear schemes.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <Heart size={22} fill="currentColor" />,
@@ -60,6 +65,7 @@ const services = [
     description:
       'Maximising community benefit and social impact from infrastructure investment.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
 ];
 
@@ -180,30 +186,25 @@ export default function HomePage() {
             style={{ backgroundImage: `url(${heroBgImage})` }}
           />
         )}
-        {/* Strong left-heavy gradient so text always reads clearly */}
-        <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'linear-gradient(105deg, rgba(10,12,18,0.92) 0%, rgba(10,12,18,0.78) 45%, rgba(10,12,18,0.35) 75%, rgba(10,12,18,0.15) 100%)'
-        }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-950 pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
           <div ref={headlineRef} className="mb-6 max-w-4xl">
             <h1 className="font-display font-bold" style={{ letterSpacing: '-0.025em', lineHeight: '1.05' }}>
               <span
                 className="hero-line block text-5xl md:text-6xl lg:text-7xl xl:text-8xl opacity-0"
-                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)' }}
+                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)', fontFamily: '__Inter_d65c78, sans-serif' }}
               >
                 Community &amp; Stakeholder
               </span>
               <span
                 className="hero-line block text-5xl md:text-6xl lg:text-7xl xl:text-8xl opacity-0 relative inline-block mt-2"
-                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)' }}
+                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)', fontFamily: 'Inter, sans-serif' }}
               >
                 Engagement Consultancy
                 <span
                   ref={underlineRef}
                   className="absolute -bottom-3 left-0 rounded-full origin-left block"
-                  style={{ transform: 'scaleX(0)', backgroundColor: '#fff100', height: '2px', width: '100%', lineHeight: '6px' }}
+                  style={{ transform: 'scaleX(0)', backgroundColor: '#fff100', height: '2px', width: '600px', lineHeight: '6px', alignSelf: 'stretch' }}
                 />
               </span>
             </h1>
@@ -305,7 +306,7 @@ export default function HomePage() {
             {services.map((service, index) => (
               <ScrollReveal key={service.title} delay={index * 0.08}>
                 <Link to={service.href} className="card-hover group h-full flex flex-col gap-4 block">
-                  <ServiceIcon>{service.icon}</ServiceIcon>
+                  <ServiceIcon bgColor={service.bgColor}>{service.icon}</ServiceIcon>
                   <h3 className="font-display font-semibold text-xl text-white">{service.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed flex-1">{service.description}</p>
                   <span className="inline-flex items-center gap-1.5 text-gold-600 text-xs font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -350,13 +351,13 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent" />
                   <div className="photo-overlay absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-white/80 text-xs uppercase tracking-widest mb-1 font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <p className="text-black/80 text-xs uppercase tracking-widest mb-1 font-semibold">
                       {project.client}
                     </p>
-                    <h3 className="text-white font-display font-semibold text-lg leading-snug drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <h3 className="text-black font-display font-semibold text-lg leading-snug">
                       {project.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-white text-sm mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <div className="flex items-center gap-2 text-black text-sm mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                       <span>View Case Study</span>
                       <ArrowRight size={14} />
                     </div>
@@ -385,7 +386,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12" style={{ gap: '57px' }}>
             <ScrollReveal>
               <img
                 src="/images/66a0ccfb063ee14ea9deb873_3.webp"
@@ -429,7 +430,7 @@ export default function HomePage() {
                       <img
                         src={client.logo_url}
                         alt={client.name}
-                        className="max-h-10 max-w-[120px] w-auto h-auto object-contain opacity-60"
+                        className="max-h-10 max-w-[120px] w-auto h-auto object-contain"
                         style={{ display: 'block' }}
                       />
                     </span>

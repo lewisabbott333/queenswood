@@ -76,7 +76,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Left: Logo + tagline */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-2">
             <Link to="/">
               <img
                 src="/images/logo-horizontal.svg"

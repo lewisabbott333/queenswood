@@ -9,10 +9,10 @@
 [data-theme="dark"] {
   --color-accent:           #fff100;
   --color-accent-hover:     #fff433;
-  --color-bg-base:          #1a1a1a;
-  --color-bg-elevated:      #313031;
-  --color-bg-border:        #3d3c3d;
-  --color-bg-muted:         #4a494a;
+  --color-bg-base:          #2D2D2D;
+  --color-bg-elevated:      #3a3a3a;
+  --color-bg-border:        #454545;
+  --color-bg-muted:         #4f4f4f;
 
   --color-text-primary:     #ffffff;
   --color-text-subtle:      #e5e5e5;
@@ -23,7 +23,7 @@
 
   --color-nav-bg:           rgba(49, 48, 49, 0.95);
   --color-nav-border:       #3d3c3d;
-  --color-mobile-overlay:   #1a1a1a;
+  --color-mobile-overlay:   #2D2D2D;
 
   --color-scrollbar:        #475569;
   --color-scrollbar-hover:  #64748b;
@@ -178,7 +178,7 @@
    ============================================================ */
 [data-theme="light"] .text-white,
 [data-theme="light"] [class*="text-white"] {
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 
 [data-theme="light"] .photo-overlay .text-white,
@@ -191,7 +191,7 @@
 [data-theme="light"] select {
   background-color: #ffffff !important;
   border-color: #d4d4d4 !important;
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 
 [data-theme="light"] input::placeholder,
@@ -202,8 +202,8 @@
 [data-theme="light"] input:focus,
 [data-theme="light"] textarea:focus,
 [data-theme="light"] select:focus {
-  border-color: #111111 !important;
-  box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.2) !important;
+  border-color: #2D2D2D !important;
+  box-shadow: 0 0 0 1px rgba(45, 45, 45, 0.2) !important;
 }
 
 [data-theme="light"] .stat-counter-value {
@@ -224,7 +224,7 @@
 [data-theme="light"] .text-gold-400,
 [data-theme="light"] .text-gold-500,
 [data-theme="light"] .text-gold-600 {
-  color: #1a1a1a !important;
+  color: #2D2D2D !important;
 }
 
 /* Gold borders stay yellow in both modes — it's a brand accent */
@@ -245,39 +245,39 @@
 .bg-gold-600,
 [data-theme="light"] .bg-gold-600,
 [data-theme="dark"] .bg-gold-600 {
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 
 /* Tailwind bg-gold-600 utility — force dark text on yellow */
 .bg-gold-600 {
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 
 /* ── Buttons ─────────────────────────────────────────────────────────────── */
 [data-theme="light"] .btn-primary {
   background-color: #fff100 !important;
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 [data-theme="light"] .btn-primary:hover {
   background-color: #ffe600 !important;
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 [data-theme="dark"] .btn-primary {
   background-color: #fff100 !important;
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 [data-theme="dark"] .btn-primary:hover {
   background-color: #fff433 !important;
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 
 [data-theme="light"] .btn-secondary {
-  border-color: #111111 !important;
-  color: #111111 !important;
+  border-color: #2D2D2D !important;
+  color: #2D2D2D !important;
   background-color: transparent !important;
 }
 [data-theme="light"] .btn-secondary:hover {
-  background-color: #111111 !important;
+  background-color: #2D2D2D !important;
   color: #ffffff !important;
 }
 
@@ -299,7 +299,7 @@
 /* The ticker/banner section uses bg-gold-600 with text — ensure dark text  */
 [data-theme="light"] .bg-gold-600,
 [data-theme="dark"] .bg-gold-600 {
-  color: #111111 !important;
+  color: #2D2D2D !important;
 }
 
 /* ── NavBar accent colour on yellow bg ───────────────────────────────────── */
@@ -331,7 +331,7 @@
 [data-theme="light"] .hover\:text-gold-400:hover,
 [data-theme="light"] .hover\:text-gold-500:hover,
 [data-theme="light"] .hover\:text-gold-600:hover {
-  color: #1a1a1a !important;
+  color: #2D2D2D !important;
 }
 
 /* ── Inline style yellow text: ensure it's readable ─────────────────────── */
@@ -377,15 +377,15 @@
   color: #fff100 !important;
 }
 
-/* ── icon-on-dark: black pill with yellow icon, immune to theme overrides ── */
+/* ── icon-on-dark: gold pill with black icon, immune to theme overrides ── */
 /* Used for contact page icon badges and social buttons                       */
 .icon-on-dark {
-  background-color: #111111 !important;
-  color: #fff100 !important;
+  background-color: #fff100 !important;
+  color: #000000 !important;
 }
 .icon-on-dark * {
-  color: #fff100 !important;
+  color: #000000 !important;
 }
 .icon-on-dark:hover {
-  background-color: #2a2a2a !important;
+  background-color: #e6d700 !important;
 }

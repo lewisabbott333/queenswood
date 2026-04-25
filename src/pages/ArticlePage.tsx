@@ -333,7 +333,7 @@ export default function ArticlePage() {
       )}
 
       {/* Back link */}
-      <div className="max-w-3xl mx-auto px-6 lg:px-8 py-10">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8 py-10 flex justify-center">
         <Link
           to="/news-and-insights"
           className="inline-flex items-center gap-2 text-gold-500 text-sm hover:text-gold-400 transition-colors"
@@ -341,6 +341,23 @@ export default function ArticlePage() {
           <ArrowLeft size={14} /> Back to News &amp; Insights
         </Link>
       </div>
+
+      {/* CTA */}
+      <section className="py-24 bg-navy-950 text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="font-display text-3xl md:text-4xl text-cream mb-6">
+              Want to hear more from us?
+            </h2>
+            <p className="text-slate-400 mb-8">
+              Get in touch to discuss how our expertise could benefit your next project.
+            </p>
+            <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
+              Contact Us <ArrowRight size={16} />
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
     </div>
   );
 }

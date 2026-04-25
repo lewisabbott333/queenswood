@@ -9,7 +9,7 @@ import { setPageSEO, jobPostingSchema, SITE_URL, organizationSchema, breadcrumbS
 
 const ServiceIcon = ({ children }: { children: React.ReactNode }) => (
   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-    style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
+    style={{ background: '#fff100', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
     {children}
   </div>
 );
@@ -142,12 +142,12 @@ export default function CareersPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/40 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <p className="text-xs uppercase tracking-widest font-semibold" style={{ color: '#fff100' }}>On site</p>
-                    <p className="text-sm font-medium text-white" style={{ border: '1px solid white' }}>Old Street Junction Improvement</p>
+                    <p className="text-sm font-medium text-white">Old Street Junction Improvement</p>
                   </div>
                 </div>
 
                 {/* Quote */}
-                <div className="bg-navy-950 rounded-2xl p-8 border border-navy-800">
+                <div className="bg-navy-950 rounded-2xl p-12 border border-navy-800">
                   <p className="text-gold-500 text-xs uppercase tracking-widest mb-4 font-medium">
                     Our Culture
                   </p>

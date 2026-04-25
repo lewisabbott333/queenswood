@@ -8,7 +8,7 @@ import { supabase } from '@/lib/supabase';
 
 const ServiceIcon = ({ children }: { children: React.ReactNode }) => (
   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-    style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
+    style={{ background: '#fff100', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
     {children}
   </div>
 );
@@ -87,39 +87,43 @@ export default function SocialConstructPage() {
   return (
     <div className="bg-navy-950 pt-20">
       {/* Hero */}
-      <section className="section-container bg-navy-950 text-center relative overflow-hidden">
+      <section className="section-container bg-navy-950 text-center relative">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500 rounded-full blur-[150px]" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <div className="inline-flex items-center gap-2 bg-gold-600/10 border border-gold-600/30 text-gold-400 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-6 font-medium">
-            A Queenswood Initiative
+        <ScrollReveal>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 bg-gold-600 text-navy-950 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-8 font-medium">
+              A Queenswood Initiative
+            </div>
+            <div className="flex justify-center mb-12">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F28115666c5234bdc96f3627fbdbd13d0?format=webp&width=800&height=1200"
+                alt="Social Construct Logo"
+                className="h-auto w-full"
+                style={{ maxWidth: '380px' }}
+              />
+            </div>
+            <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              A new initiative aimed at raising awareness of the opportunities and benefits for young
+              people joining the UK construction industry.
+            </p>
           </div>
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl text-cream leading-tight mb-6">
-            Social{' '}
-            <span className="relative inline-block">
-              <span className="text-gold-500">Construct</span>
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gold-500 rounded-full" />
-            </span>
-          </h1>
-          <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mt-8">
-            A new initiative aimed at raising awareness of the opportunities and benefits for young
-            people joining the UK construction industry.
-          </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Ticker */}
-      <section className="bg-gold-600 py-4 overflow-hidden">
+      <section className="bg-gold-600 py-4 overflow-hidden flex items-center justify-center">
         <div className="flex whitespace-nowrap">
           <div
-            className="flex gap-8 flex-shrink-0 items-center"
+            className="flex gap-0 flex-shrink-0 items-center"
             style={{ animation: 'tickerScroll 20s linear infinite' }}
           >
             {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
               <span
                 key={`${item}-${i}`}
-                className="text-navy-950 font-display text-sm uppercase tracking-[0.2em] font-bold px-4"
+                className="font-display text-sm uppercase tracking-[0.2em] font-bold px-1"
+                style={{ color: '#000000' }}
               >
                 {item} ·
               </span>
@@ -163,10 +167,10 @@ export default function SocialConstructPage() {
             </ScrollReveal>
 
             <ScrollReveal from="right">
-              <div className="bg-navy-950 rounded-2xl p-8 border border-gold-600/20 relative overflow-hidden">
+              <div className="bg-navy-950 rounded-2xl p-8 border border-gold-600/20 relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-600/5 rounded-full blur-2xl" />
                 <div className="relative z-10">
-                  <div className="w-40 h-56 rounded-lg overflow-hidden mb-5 flex-shrink-0">
+                  <div className="w-full rounded-lg mb-8 flex-shrink-0">
                     {presenterImage ? (
                       <img
                         src={presenterImage}
@@ -238,36 +242,48 @@ export default function SocialConstructPage() {
       </section>
 
       {/* Platforms */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-24 bg-navy-900">
+        <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
           <ScrollReveal>
-            <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-4">
-              Where to Find Us
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl text-cream mb-6">
-              Follow Social Construct
-            </h2>
-            <p className="text-slate-400 mb-10 leading-relaxed">
-              Find us on TikTok and Instagram for engaging, authentic content about careers in
-              the UK construction industry. Hit follow to stay updated with the latest videos,
-              interviews, and stories.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="w-full">
+              <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-4">
+                Where to Find Us
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl text-cream mb-8">
+                Follow Social Construct
+              </h2>
+              <p className="text-slate-300 text-lg mb-16 leading-relaxed">
+                Find us on TikTok and Instagram for engaging, authentic content about careers in
+                the UK construction industry. Hit follow to stay updated with the latest videos,
+                interviews, and stories.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-12 w-full">
               <a
                 href="https://tiktok.com/@socialconstruct"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center gap-2 px-8 py-3"
+                className="hover:opacity-90 transition-all duration-300 group"
+                aria-label="Follow on TikTok"
               >
-                Follow on TikTok <ArrowRight size={16} />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F40ba5980108749e2af5db6e5fb8557d1?format=webp&width=800&height=1200"
+                  alt="TikTok"
+                  className="h-40 w-auto group-hover:scale-105 transition-transform duration-300"
+                />
               </a>
               <a
                 href="https://instagram.com/socialconstruct"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary inline-flex items-center gap-2 px-8 py-3"
+                className="hover:opacity-90 transition-all duration-300 group"
+                aria-label="Follow on Instagram"
               >
-                Follow on Instagram <ArrowRight size={16} />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2ff446a1a2f24b2eaab3e1af40ad525e?format=webp&width=800&height=1200"
+                  alt="Instagram"
+                  className="h-40 w-auto group-hover:scale-105 transition-transform duration-300"
+                />
               </a>
             </div>
           </ScrollReveal>

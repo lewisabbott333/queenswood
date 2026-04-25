@@ -336,9 +336,9 @@ export default function CaseStudyPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent" />
                   <div className="photo-overlay absolute bottom-0 left-0 right-0 p-5">
-                    <p className="text-white/80 text-xs mb-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{project.client}</p>
-                    <h3 className="text-white font-display text-sm leading-snug drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{project.title}</h3>
-                    <div className="flex items-center gap-2 text-white text-xs mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <p className="text-black/80 text-xs mb-1">{project.client}</p>
+                    <h3 className="text-black font-display text-sm leading-snug">{project.title}</h3>
+                    <div className="flex items-center gap-2 text-black text-xs mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <span>View</span>
                       <ArrowRight size={12} />
                     </div>

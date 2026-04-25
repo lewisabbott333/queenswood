@@ -130,9 +130,9 @@ export default function Navigation() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={
-          scrolled || theme === 'light'
+          scrolled || theme === 'light' || location.pathname === '/shop'
             ? {
-                backgroundColor: navColors.bg || '#0a0c12',
+                backgroundColor: navColors.bg || '#2D2D2D',
                 backdropFilter: 'blur(12px)',
                 WebkitBackdropFilter: 'blur(12px)',
                 borderBottom: '1px solid rgba(255,255,255,0.08)',
@@ -147,10 +147,9 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
-                src="/images/logo-horizontal.svg"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fddb7c4534e7c4009bade490fe79ac232?format=webp&width=800&height=1200"
                 alt="Queenswood Engagement"
                 className="h-7 w-auto transition-all duration-300"
-                style={{ filter: 'brightness(0) invert(1)' }}
                 loading="eager"
               />
             </Link>
@@ -217,10 +216,9 @@ export default function Navigation() {
 
         <div className="mb-10">
           <img
-            src="/images/logo-horizontal.svg"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fddb7c4534e7c4009bade490fe79ac232?format=webp&width=800&height=1200"
             alt="Queenswood Engagement"
             className="h-8 w-auto transition-all duration-300"
-            style={{ filter: 'brightness(0) invert(1)' }}
           />
         </div>
 

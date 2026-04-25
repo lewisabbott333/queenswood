@@ -150,14 +150,13 @@ export default function ContactPage() {
       {/* Main content */}
       <section className="section-container bg-navy-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
             {/* Left: Contact details + map */}
             <ScrollReveal from="left">
               <div className="space-y-8">
                 <div>
                   <SectionHeader
-                    strapline="Find Us"
-                    heading="Our Details"
+                    heading="Find Us"
                     align="left"
                   />
                 </div>
@@ -235,13 +234,12 @@ export default function ContactPage() {
                 {/* Map */}
                 <div className="rounded-xl overflow-hidden border border-navy-800 h-[530px]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.8!2d-0.1175!3d51.5239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5261e4f0b9%3A0x84e1b6c6e5c5d5e5!2s175-185%20Gray's%20Inn%20Rd%2C%20London%20WC1X%208UE!5e0!3m2!1sen!2suk!4v1617789456000!5m2!1sen!2suk"
+                    src="https://api.mapbox.com/styles/v1/banzan2/cln4qgm7k06q701pha9vb87l6.html?title=false&access_token=pk.eyJ1IjoiYmFuemFuMiIsImEiOiJja21xczYyeHEwMHkxMnByc3V6a3Z6cWUwIn0.gjIUP-36_vRrZvoJEKHMJQ&zoomwheel=true#16.68/51.525747/-0.11487"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
                     title="Queenswood Engagement office location"
                   />
                 </div>
@@ -250,9 +248,9 @@ export default function ContactPage() {
 
             {/* Right: Contact form */}
             <ScrollReveal from="right">
-              <div className="rounded-2xl p-10 md:p-12" style={{ backgroundColor: '#fff100' }}>
+              <div className="rounded-2xl p-10 md:p-12 flex flex-col h-full" style={{ backgroundColor: '#fff100' }}>
                 {submitted ? (
-                  <div className="flex flex-col items-center justify-center text-center gap-5 py-12">
+                  <div className="flex flex-col items-center justify-center text-center gap-5 py-12 flex-1">
                     <div className="p-4 bg-black/10 rounded-full" style={{ color: '#1a1a1a' }}>
                       <CheckCircle size={40} />
                     </div>
@@ -269,7 +267,7 @@ export default function ContactPage() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-5 flex-1" noValidate>
                     <h2 className="font-display text-2xl mb-2" style={{ color: '#1a1a1a' }}>Send us a message</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -335,7 +333,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <div>
+                    <div className="flex-1">
                       <label className="block text-xs uppercase tracking-wider mb-2 font-semibold" style={{ color: '#3a3a3a' }}>
                         Message <span style={{ color: '#1a1a1a' }}>*</span>
                       </label>
@@ -345,7 +343,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="Tell us about your project or enquiry..."
                         required
-                        rows={5}
+                        rows={10}
                         className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none transition-colors resize-none"
                         style={{ background: 'rgba(0,0,0,0.08)', border: '1.5px solid rgba(0,0,0,0.15)', color: '#1a1a1a' }}
                       />
@@ -357,18 +355,20 @@ export default function ContactPage() {
                       </p>
                     )}
 
-                    <button
-                      type="submit"
-                      disabled={submitting}
-                      className="w-full py-4 text-base font-semibold rounded-lg transition-all duration-300 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
-                      style={{ background: '#1a1a1a', color: '#fff100' }}
-                    >
-                      {submitting ? 'Sending...' : 'Send Message'}
-                    </button>
+                    <div className="mt-auto space-y-4">
+                      <button
+                        type="submit"
+                        disabled={submitting}
+                        className="w-full py-4 text-base font-semibold rounded-lg transition-all duration-300 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
+                        style={{ background: '#1a1a1a', color: '#fff100' }}
+                      >
+                        {submitting ? 'Sending...' : 'Send Message'}
+                      </button>
 
-                    <p className="text-xs text-center" style={{ color: '#5a5a5a' }}>
-                      We typically respond within one business day.
-                    </p>
+                      <p className="text-xs text-center" style={{ color: '#5a5a5a' }}>
+                        We typically respond within one business day.
+                      </p>
+                    </div>
                   </form>
                 )}
               </div>

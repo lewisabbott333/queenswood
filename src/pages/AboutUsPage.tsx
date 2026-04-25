@@ -9,7 +9,7 @@ import type { TeamMember } from '@/lib/supabase';
 
 const ServiceIcon = ({ children }: { children: React.ReactNode }) => (
   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-    style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
+    style={{ background: '#fff100', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
     {children}
   </div>
 );
@@ -118,8 +118,8 @@ export default function AboutUsPage() {
                 </p>
 
                 {/* Pull quote */}
-                <div className="relative pl-6 border-l-2 border-gold-600/50 mt-8">
-                  <Quote size={20} className="text-gold-600/40 mb-2" />
+                <div className="relative pl-6 border-l-2 mt-8" style={{ borderColor: '#2D2D2D' }}>
+                  <Quote size={20} className="mb-2" style={{ color: '#2D2D2D' }} />
                   <p className="text-cream font-display text-lg italic leading-relaxed">
                     "We believe great engagement transforms infrastructure from something that happens
                     to communities, into something that happens with them."
@@ -131,21 +131,21 @@ export default function AboutUsPage() {
             <ScrollReveal from="right">
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-navy-950 rounded-xl p-6 border border-navy-800">
-                    <p className="font-display text-4xl text-gold-500 mb-2">629k+</p>
-                    <p className="text-slate-400 text-sm">Stakeholders engaged across all projects</p>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
+                    <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>629k+</p>
+                    <p className="text-sm" style={{ color: '#2D2D2D' }}>Stakeholders engaged across all projects</p>
                   </div>
-                  <div className="bg-navy-950 rounded-xl p-6 border border-navy-800">
-                    <p className="font-display text-4xl text-gold-500 mb-2">10+</p>
-                    <p className="text-slate-400 text-sm">Active infrastructure projects</p>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
+                    <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>10+</p>
+                    <p className="text-sm" style={{ color: '#2D2D2D' }}>Active infrastructure projects</p>
                   </div>
-                  <div className="bg-navy-950 rounded-xl p-6 border border-navy-800">
-                    <p className="font-display text-4xl text-gold-500 mb-2">2</p>
-                    <p className="text-slate-400 text-sm">Major industry awards won</p>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
+                    <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>2</p>
+                    <p className="text-sm" style={{ color: '#2D2D2D' }}>Major industry awards won</p>
                   </div>
-                  <div className="bg-navy-950 rounded-xl p-6 border border-navy-800">
-                    <p className="font-display text-4xl text-gold-500 mb-2">100%</p>
-                    <p className="text-slate-400 text-sm">Infrastructure sector focus</p>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
+                    <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>100%</p>
+                    <p className="text-sm" style={{ color: '#2D2D2D' }}>Infrastructure sector focus</p>
                   </div>
                 </div>
 
@@ -159,7 +159,7 @@ export default function AboutUsPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/40 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: '#faf37a' }}>Featured Project</p>
+                    <p className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: '#f8e71c' }}>Featured Project</p>
                     <p className="text-sm font-medium text-white">SESRO — Oxford Water Project</p>
                   </div>
                 </div>
