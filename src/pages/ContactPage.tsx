@@ -156,8 +156,7 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div>
                   <SectionHeader
-                    strapline="Find Us"
-                    heading="Our Details"
+                    heading="Find Us"
                     align="left"
                   />
                 </div>
