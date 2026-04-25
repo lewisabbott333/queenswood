@@ -180,11 +180,6 @@ export default function HomePage() {
             style={{ backgroundImage: `url(${heroBgImage})` }}
           />
         )}
-        {/* Strong left-heavy gradient so text always reads clearly */}
-        <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'linear-gradient(105deg, rgba(45,45,45,0.92) 0%, rgba(45,45,45,0.78) 45%, rgba(45,45,45,0.35) 75%, rgba(45,45,45,0.15) 100%)'
-        }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-950 pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
           <div ref={headlineRef} className="mb-6 max-w-4xl">
