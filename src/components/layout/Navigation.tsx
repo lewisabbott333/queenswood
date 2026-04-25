@@ -167,7 +167,7 @@ export default function Navigation() {
                         color: isActive
                           ? (navColors.accent || '#fff100')
                           : (navColors.text || '#ffffff'),
-                        textShadow: '0 1px 8px rgba(0,0,0,0.6)',
+                        textShadow: theme === 'dark' ? '0 1px 8px rgba(0,0,0,0.6)' : 'none',
                       }}
                     >
                       {link.label}
