@@ -234,7 +234,7 @@ export default function ContactPage() {
                 {/* Map */}
                 <div className="rounded-xl overflow-hidden border border-navy-800 h-[530px]">
                   <iframe
-                    src={`https://api.mapbox.com/styles/v1/banzan2/cln4qgm7k06q701pha9vb87l6.html?title=false&access_token=${import.meta.env.VITE_MAPBOX_TOKEN}&zoomwheel=true#16.68/51.525747/-0.11487`}
+                    src="https://api.mapbox.com/styles/v1/banzan2/cln4qgm7k06q701pha9vb87l6.html?title=false&access_token=pk.eyJ1IjoiYmFuemFuMiIsImEiOiJja21xczYyeHEwMHkxMnByc3V6a3Z6cWUwIn0.gjIUP-36_vRrZvoJEKHMJQ&zoomwheel=true#16.68/51.525747/-0.11487"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
