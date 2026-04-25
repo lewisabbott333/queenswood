@@ -122,7 +122,8 @@ export default function SocialConstructPage() {
             {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
               <span
                 key={`${item}-${i}`}
-                className="text-navy-950 font-display text-sm uppercase tracking-[0.2em] font-bold px-4"
+                className="font-display text-sm uppercase tracking-[0.2em] font-bold px-4"
+                style={{ color: '#000000' }}
               >
                 {item} ·
               </span>
