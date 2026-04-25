@@ -351,13 +351,13 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent" />
                   <div className="photo-overlay absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-white/80 text-xs uppercase tracking-widest mb-1 font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <p className="text-black/80 text-xs uppercase tracking-widest mb-1 font-semibold">
                       {project.client}
                     </p>
-                    <h3 className="text-white font-display font-semibold text-lg leading-snug drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <h3 className="text-black font-display font-semibold text-lg leading-snug">
                       {project.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-white text-sm mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <div className="flex items-center gap-2 text-black text-sm mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                       <span>View Case Study</span>
                       <ArrowRight size={14} />
                     </div>
