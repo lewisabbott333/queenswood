@@ -147,7 +147,7 @@ export default function CareersPage() {
                 </div>
 
                 {/* Quote */}
-                <div className="bg-navy-950 rounded-2xl p-8 border border-navy-800">
+                <div className="bg-navy-950 rounded-2xl p-12 border border-navy-800">
                   <p className="text-gold-500 text-xs uppercase tracking-widest mb-4 font-medium">
                     Our Culture
                   </p>
