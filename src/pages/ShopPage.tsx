@@ -153,7 +153,7 @@ export default function ShopPage() {
       <section className="py-24 bg-black text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl text-white mb-5">
+            <h2 className="font-display text-3xl md:text-4xl mb-5" style={{ color: '#fff100' }}>
               Not sure what you need?
             </h2>
             <p className="text-gray-400 mb-8 leading-relaxed">
