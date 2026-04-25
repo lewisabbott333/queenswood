@@ -377,15 +377,15 @@
   color: #fff100 !important;
 }
 
-/* ── icon-on-dark: black pill with yellow icon, immune to theme overrides ── */
+/* ── icon-on-dark: gold pill with black icon, immune to theme overrides ── */
 /* Used for contact page icon badges and social buttons                       */
 .icon-on-dark {
-  background-color: #2D2D2D !important;
-  color: #fff100 !important;
+  background-color: #fff100 !important;
+  color: #000000 !important;
 }
 .icon-on-dark * {
-  color: #fff100 !important;
+  color: #000000 !important;
 }
 .icon-on-dark:hover {
-  background-color: #3a3a3a !important;
+  background-color: #e6d700 !important;
 }
