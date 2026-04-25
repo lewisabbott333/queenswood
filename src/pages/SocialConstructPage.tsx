@@ -91,21 +91,25 @@ export default function SocialConstructPage() {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500 rounded-full blur-[150px]" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <div className="inline-flex items-center gap-2 bg-gold-600/10 border border-gold-600/30 text-gold-400 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-6 font-medium">
-            A Queenswood Initiative
+        <ScrollReveal>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 bg-gold-600/10 border border-gold-600/30 text-gold-400 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-8 font-medium">
+              A Queenswood Initiative
+            </div>
+            <div className="flex justify-center mb-12">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F28115666c5234bdc96f3627fbdbd13d0?format=webp&width=800&height=1200"
+                alt="Social Construct Logo"
+                className="h-auto w-full"
+                style={{ maxWidth: '380px' }}
+              />
+            </div>
+            <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              A new initiative aimed at raising awareness of the opportunities and benefits for young
+              people joining the UK construction industry.
+            </p>
           </div>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F28115666c5234bdc96f3627fbdbd13d0?format=webp&width=800&height=1200"
-            alt="Social Construct Logo"
-            className="h-auto mb-6"
-            style={{ maxWidth: '500px', width: '100%' }}
-          />
-          <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mt-8">
-            A new initiative aimed at raising awareness of the opportunities and benefits for young
-            people joining the UK construction industry.
-          </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Ticker */}
