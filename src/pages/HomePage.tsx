@@ -9,9 +9,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { setPageSEO, organizationSchema, websiteSchema, localBusinessSchema, SITE_URL } from '@/lib/seo';
 
-const ServiceIcon = ({ children }: { children: React.ReactNode }) => (
+const ServiceIcon = ({ children, bgColor = '#f8e71c' }: { children: React.ReactNode; bgColor?: string }) => (
   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-    style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
+    style={{ background: bgColor, border: '1px solid rgba(255,255,255,0.15)', color: '#0d1b2e', boxShadow: '0 2px 8px rgba(0,0,0,0.25)' }}>
     {children}
   </div>
 );
@@ -25,6 +25,7 @@ const services = [
     description:
       'We connect infrastructure projects with local communities, building relationships built on trust and transparency.',
     href: '/what-we-do',
+    bgColor: '#fff100',
   },
   {
     icon: <Network size={22} />,
@@ -32,6 +33,7 @@ const services = [
     description:
       'Expert management of complex multi-stakeholder environments, navigating competing interests with skill.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <Camera size={22} fill="currentColor" />,
@@ -39,6 +41,7 @@ const services = [
     description:
       'Bringing complex infrastructure information to life through compelling visual content.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <MessageSquare size={22} fill="currentColor" />,
@@ -46,6 +49,7 @@ const services = [
     description:
       'Rigorous, inclusive consultation processes that exceed regulatory requirements.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <Tractor size={22} fill="currentColor" />,
@@ -53,6 +57,7 @@ const services = [
     description:
       'Specialist engagement with landowners and farming communities across major linear schemes.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
   {
     icon: <Heart size={22} fill="currentColor" />,
@@ -60,6 +65,7 @@ const services = [
     description:
       'Maximising community benefit and social impact from infrastructure investment.',
     href: '/what-we-do',
+    bgColor: '#f8e71c',
   },
 ];
 
@@ -300,7 +306,7 @@ export default function HomePage() {
             {services.map((service, index) => (
               <ScrollReveal key={service.title} delay={index * 0.08}>
                 <Link to={service.href} className="card-hover group h-full flex flex-col gap-4 block">
-                  <ServiceIcon>{service.icon}</ServiceIcon>
+                  <ServiceIcon bgColor={service.bgColor}>{service.icon}</ServiceIcon>
                   <h3 className="font-display font-semibold text-xl text-white">{service.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed flex-1">{service.description}</p>
                   <span className="inline-flex items-center gap-1.5 text-gold-600 text-xs font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
