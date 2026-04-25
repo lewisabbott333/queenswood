@@ -235,13 +235,12 @@ export default function ContactPage() {
                 {/* Map */}
                 <div className="rounded-xl overflow-hidden border border-navy-800 h-[530px]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.8!2d-0.1175!3d51.5239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5261e4f0b9%3A0x84e1b6c6e5c5d5e5!2s175-185%20Gray's%20Inn%20Rd%2C%20London%20WC1X%208UE!5e0!3m2!1sen!2suk!4v1617789456000!5m2!1sen!2suk"
+                    src="https://api.mapbox.com/styles/v1/banzan2/cln4qgm7k06q701pha9vb87l6.html?title=false&access_token=pk.eyJ1IjoiYmFuemFuMiIsImEiOiJja21xczYyeHEwMHkxMnByc3V6a3Z6cWUwIn0.gjIUP-36_vRrZvoJEKHMJQ&zoomwheel=true#16.68/51.525747/-0.11487"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
                     title="Queenswood Engagement office location"
                   />
                 </div>
