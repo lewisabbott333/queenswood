@@ -142,7 +142,7 @@ export default function CareersPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/40 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <p className="text-xs uppercase tracking-widest font-semibold" style={{ color: '#fff100' }}>On site</p>
-                    <p className="text-sm font-medium text-white" style={{ border: '1px solid white' }}>Old Street Junction Improvement</p>
+                    <p className="text-sm font-medium text-white">Old Street Junction Improvement</p>
                   </div>
                 </div>
 
