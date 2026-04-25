@@ -130,7 +130,7 @@ export default function Navigation() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={
-          scrolled || theme === 'light'
+          scrolled || theme === 'light' || location.pathname === '/shop'
             ? {
                 backgroundColor: navColors.bg || '#2D2D2D',
                 backdropFilter: 'blur(12px)',
