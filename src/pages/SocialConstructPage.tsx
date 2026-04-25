@@ -113,10 +113,10 @@ export default function SocialConstructPage() {
       </section>
 
       {/* Ticker */}
-      <section className="bg-gold-600 py-4 overflow-hidden">
+      <section className="bg-gold-600 py-4 overflow-hidden flex items-center justify-center">
         <div className="flex whitespace-nowrap">
           <div
-            className="flex gap-8 flex-shrink-0 items-center"
+            className="flex gap-0 flex-shrink-0 items-center"
             style={{ animation: 'tickerScroll 20s linear infinite' }}
           >
             {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
