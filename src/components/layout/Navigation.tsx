@@ -162,12 +162,13 @@ export default function Navigation() {
                   <li key={link.href}>
                     <Link
                       to={link.href}
+                      data-nav-link={isActive ? 'active' : 'inactive'}
                       className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 group`}
                       style={{
                         color: isActive
                           ? (navColors.accent || '#fff100')
                           : (navColors.text || '#ffffff'),
-                        textShadow: '0 1px 8px rgba(0,0,0,0.6)',
+                        textShadow: theme === 'dark' ? '0 1px 8px rgba(0,0,0,0.6)' : 'none',
                       }}
                     >
                       {link.label}

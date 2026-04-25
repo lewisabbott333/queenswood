@@ -166,7 +166,7 @@ export default function SocialConstructPage() {
               <div className="bg-navy-950 rounded-2xl p-8 border border-gold-600/20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-600/5 rounded-full blur-2xl" />
                 <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mb-5 flex-shrink-0">
+                  <div className="w-40 h-56 rounded-lg overflow-hidden mb-5 flex-shrink-0">
                     {presenterImage ? (
                       <img
                         src={presenterImage}
@@ -174,9 +174,11 @@ export default function SocialConstructPage() {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gold-600 flex items-center justify-center text-navy-950 font-display text-2xl font-bold">
-                        AT
-                      </div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2e344eb562894452a338e445595a8d88?format=webp&width=800&height=1200"
+                        alt="Alex Teniola"
+                        className="w-full h-full object-cover"
+                      />
                     )}
                   </div>
                   <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-3">
