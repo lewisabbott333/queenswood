@@ -242,46 +242,48 @@ export default function SocialConstructPage() {
       </section>
 
       {/* Platforms */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-24 bg-navy-900">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-4">
               Where to Find Us
             </p>
-            <h2 className="font-display text-3xl md:text-4xl text-cream mb-6">
+            <h2 className="font-display text-4xl md:text-5xl text-cream mb-8">
               Follow Social Construct
             </h2>
-            <p className="text-slate-400 mb-10 leading-relaxed">
+            <p className="text-slate-300 text-lg mb-16 leading-relaxed">
               Find us on TikTok and Instagram for engaging, authentic content about careers in
               the UK construction industry. Hit follow to stay updated with the latest videos,
               interviews, and stories.
             </p>
-            <div className="flex items-center justify-center gap-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
               <a
                 href="https://tiktok.com/@socialconstruct"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
+                className="flex flex-col items-center gap-4 p-8 rounded-2xl border border-gold-600/30 hover:border-gold-600 hover:bg-gold-600/5 transition-all duration-300 group"
                 aria-label="Follow on TikTok"
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F40ba5980108749e2af5db6e5fb8557d1?format=webp&width=800&height=1200"
                   alt="TikTok"
-                  className="h-16 w-auto"
+                  className="h-32 w-auto group-hover:scale-110 transition-transform duration-300"
                 />
+                <span className="text-gold-500 font-semibold text-lg">TikTok</span>
               </a>
               <a
                 href="https://instagram.com/socialconstruct"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
+                className="flex flex-col items-center gap-4 p-8 rounded-2xl border border-gold-600/30 hover:border-gold-600 hover:bg-gold-600/5 transition-all duration-300 group"
                 aria-label="Follow on Instagram"
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2ff446a1a2f24b2eaab3e1af40ad525e?format=webp&width=800&height=1200"
                   alt="Instagram"
-                  className="h-16 w-auto"
+                  className="h-32 w-auto group-hover:scale-110 transition-transform duration-300"
                 />
+                <span className="text-gold-500 font-semibold text-lg">Instagram</span>
               </a>
             </div>
           </ScrollReveal>
