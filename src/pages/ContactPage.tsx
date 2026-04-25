@@ -150,7 +150,7 @@ export default function ContactPage() {
       {/* Main content */}
       <section className="section-container bg-navy-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
             {/* Left: Contact details + map */}
             <ScrollReveal from="left">
               <div className="space-y-8">
@@ -250,9 +250,9 @@ export default function ContactPage() {
 
             {/* Right: Contact form */}
             <ScrollReveal from="right">
-              <div className="rounded-2xl p-10 md:p-12" style={{ backgroundColor: '#fff100' }}>
+              <div className="rounded-2xl p-10 md:p-12 flex flex-col h-full" style={{ backgroundColor: '#fff100' }}>
                 {submitted ? (
-                  <div className="flex flex-col items-center justify-center text-center gap-5 py-12">
+                  <div className="flex flex-col items-center justify-center text-center gap-5 py-12 flex-1">
                     <div className="p-4 bg-black/10 rounded-full" style={{ color: '#1a1a1a' }}>
                       <CheckCircle size={40} />
                     </div>
@@ -269,7 +269,7 @@ export default function ContactPage() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-5 flex-1" noValidate>
                     <h2 className="font-display text-2xl mb-2" style={{ color: '#1a1a1a' }}>Send us a message</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -335,7 +335,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <div>
+                    <div className="flex-1">
                       <label className="block text-xs uppercase tracking-wider mb-2 font-semibold" style={{ color: '#3a3a3a' }}>
                         Message <span style={{ color: '#1a1a1a' }}>*</span>
                       </label>
@@ -345,7 +345,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="Tell us about your project or enquiry..."
                         required
-                        rows={5}
+                        rows={10}
                         className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none transition-colors resize-none"
                         style={{ background: 'rgba(0,0,0,0.08)', border: '1.5px solid rgba(0,0,0,0.15)', color: '#1a1a1a' }}
                       />
@@ -357,18 +357,20 @@ export default function ContactPage() {
                       </p>
                     )}
 
-                    <button
-                      type="submit"
-                      disabled={submitting}
-                      className="w-full py-4 text-base font-semibold rounded-lg transition-all duration-300 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
-                      style={{ background: '#1a1a1a', color: '#fff100' }}
-                    >
-                      {submitting ? 'Sending...' : 'Send Message'}
-                    </button>
+                    <div className="mt-auto space-y-4">
+                      <button
+                        type="submit"
+                        disabled={submitting}
+                        className="w-full py-4 text-base font-semibold rounded-lg transition-all duration-300 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
+                        style={{ background: '#1a1a1a', color: '#fff100' }}
+                      >
+                        {submitting ? 'Sending...' : 'Send Message'}
+                      </button>
 
-                    <p className="text-xs text-center" style={{ color: '#5a5a5a' }}>
-                      We typically respond within one business day.
-                    </p>
+                      <p className="text-xs text-center" style={{ color: '#5a5a5a' }}>
+                        We typically respond within one business day.
+                      </p>
+                    </div>
                   </form>
                 )}
               </div>
