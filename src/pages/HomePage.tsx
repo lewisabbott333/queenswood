@@ -430,7 +430,7 @@ export default function HomePage() {
                       <img
                         src={client.logo_url}
                         alt={client.name}
-                        className="max-h-10 max-w-[120px] w-auto h-auto object-contain opacity-60"
+                        className="max-h-10 max-w-[120px] w-auto h-auto object-contain"
                         style={{ display: 'block' }}
                       />
                     </span>
