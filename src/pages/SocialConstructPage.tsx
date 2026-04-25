@@ -174,9 +174,11 @@ export default function SocialConstructPage() {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gold-600 flex items-center justify-center text-navy-950 font-display text-2xl font-bold">
-                        AT
-                      </div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2e344eb562894452a338e445595a8d88?format=webp&width=800&height=1200"
+                        alt="Alex Teniola"
+                        className="w-full h-full object-cover"
+                      />
                     )}
                   </div>
                   <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-3">
