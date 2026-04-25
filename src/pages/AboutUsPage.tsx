@@ -208,7 +208,7 @@ export default function AboutUsPage() {
                       className="rounded-xl border border-navy-800 w-full aspect-square object-cover"
                       loading="lazy"
                     />
-                    <div className="rounded-xl border border-gold-600/20 p-4 flex flex-col gap-1" style={{ backgroundColor: '#faf37a' }}>
+                    <div className="rounded-xl border border-gold-600/20 p-4 flex flex-col gap-1" style={{ backgroundColor: '#fff100' }}>
                       <p className="font-display text-3xl text-gold-500">15+</p>
                       <p className="text-slate-400 text-xs">Years of combined senior expertise</p>
                     </div>
