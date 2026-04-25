@@ -1,0 +1,391 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   THEME: DARK (default)
+   ============================================================ */
+:root,
+[data-theme="dark"] {
+  --color-accent:           #fff100;
+  --color-accent-hover:     #fff433;
+  --color-bg-base:          #1a1a1a;
+  --color-bg-elevated:      #313031;
+  --color-bg-border:        #3d3c3d;
+  --color-bg-muted:         #4a494a;
+
+  --color-text-primary:     #ffffff;
+  --color-text-subtle:      #e5e5e5;
+  --color-text-muted:       #cccccc;
+  --color-text-faint:       #999999;
+  --color-text-faintest:    #777777;
+  --color-text-placeholder: #555555;
+
+  --color-nav-bg:           rgba(49, 48, 49, 0.95);
+  --color-nav-border:       #3d3c3d;
+  --color-mobile-overlay:   #1a1a1a;
+
+  --color-scrollbar:        #475569;
+  --color-scrollbar-hover:  #64748b;
+
+  --logo-filter:            brightness(0) invert(1);
+}
+
+/* ============================================================
+   THEME: LIGHT  — mirrors wearequeenswood.com brand palette
+   White background, pure black text, yellow accent (#fff100)
+   ============================================================ */
+[data-theme="light"] {
+  --color-accent:           #fff100;
+  --color-accent-hover:     #ffe600;
+  --color-bg-base:          #ffffff;
+  --color-bg-elevated:      #f5f5f5;
+  --color-bg-border:        #e2e2e2;
+  --color-bg-muted:         #d0d0d0;
+
+  --color-text-primary:     #111111;
+  --color-text-subtle:      #222222;
+  --color-text-muted:       #444444;
+  --color-text-faint:       #666666;
+  --color-text-faintest:    #999999;
+  --color-text-placeholder: #bbbbbb;
+
+  --color-nav-bg:           rgba(255, 255, 255, 0.97);
+  --color-nav-border:       #e2e2e2;
+  --color-mobile-overlay:   #ffffff;
+
+  --color-scrollbar:        #cccccc;
+  --color-scrollbar-hover:  #999999;
+
+  --logo-filter:            none;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body;
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+    color: var(--color-text-primary);
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  button {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-8 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold-600 font-semibold hover:bg-gold-500 active:scale-95;
+    color: #1a1a1a;
+  }
+
+  .btn-secondary {
+    @apply btn border-2 border-gold-600 text-gold-600 hover:bg-gold-600;
+  }
+
+  .btn-secondary:hover {
+    color: #1a1a1a;
+  }
+
+  .btn-ghost {
+    @apply btn hover:text-gold-600;
+    color: var(--color-text-primary);
+  }
+
+  .section-container {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .hero-text {
+    @apply font-display text-5xl md:text-6xl lg:text-7xl leading-tight;
+  }
+
+  .subheading {
+    @apply font-display text-3xl md:text-4xl leading-tight;
+  }
+
+  .body-text {
+    @apply text-lg md:text-xl leading-relaxed;
+    color: var(--color-text-faint);
+  }
+
+  .card {
+    @apply rounded-xl p-6 md:p-8;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-bg-border);
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    border-color: #fff100;
+    box-shadow: 0 10px 30px rgba(255, 241, 0, 0.1);
+  }
+
+  .grid-auto-fit {
+    @apply grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+/* ============================================================
+   LIGHT THEME OVERRIDES
+   Force readable text for hardcoded Tailwind white classes
+   ============================================================ */
+[data-theme="light"] .text-white,
+[data-theme="light"] [class*="text-white"] {
+  color: #111111 !important;
+}
+
+[data-theme="light"] .photo-overlay .text-white,
+[data-theme="light"] .photo-overlay [class*="text-white"] {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: #ffffff !important;
+  border-color: #d4d4d4 !important;
+  color: #111111 !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #aaaaaa !important;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: #111111 !important;
+  box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.2) !important;
+}
+
+[data-theme="light"] .stat-counter-value {
+  color: #111111 !important;
+}
+
+[data-theme="light"] .shadow-black\/50 {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .shadow-black\/30 {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ── Gold text: visible in both modes ───────────────────────────────────── */
+/* Dark mode: bright yellow is fine on dark backgrounds                     */
+/* Light mode: yellow on white is invisible → use dark ink instead          */
+[data-theme="light"] .text-gold-400,
+[data-theme="light"] .text-gold-500,
+[data-theme="light"] .text-gold-600 {
+  color: #1a1a1a !important;
+}
+
+/* Gold borders stay yellow in both modes — it's a brand accent */
+[data-theme="light"] .border-gold-600 {
+  border-color: #fff100 !important;
+}
+[data-theme="light"] .border-gold-600\/30 {
+  border-color: rgba(255, 241, 0, 0.4) !important;
+}
+[data-theme="light"] .border-gold-600\/40 {
+  border-color: rgba(255, 241, 0, 0.5) !important;
+}
+
+/* ── Yellow backgrounds always get dark text ─────────────────────────────── */
+/* Applies to both modes: #fff100 is too light for white or yellow text      */
+[style*="background-color: rgb(255, 241, 0)"],
+[style*="backgroundColor: '#fff100'"],
+.bg-gold-600,
+[data-theme="light"] .bg-gold-600,
+[data-theme="dark"] .bg-gold-600 {
+  color: #111111 !important;
+}
+
+/* Tailwind bg-gold-600 utility — force dark text on yellow */
+.bg-gold-600 {
+  color: #111111 !important;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+[data-theme="light"] .btn-primary {
+  background-color: #fff100 !important;
+  color: #111111 !important;
+}
+[data-theme="light"] .btn-primary:hover {
+  background-color: #ffe600 !important;
+  color: #111111 !important;
+}
+[data-theme="dark"] .btn-primary {
+  background-color: #fff100 !important;
+  color: #111111 !important;
+}
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #fff433 !important;
+  color: #111111 !important;
+}
+
+[data-theme="light"] .btn-secondary {
+  border-color: #111111 !important;
+  color: #111111 !important;
+  background-color: transparent !important;
+}
+[data-theme="light"] .btn-secondary:hover {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+}
+
+/* ── Gold tinted backgrounds ─────────────────────────────────────────────── */
+[data-theme="light"] .bg-gold-600\/10 {
+  background-color: rgba(255, 241, 0, 0.15) !important;
+}
+[data-theme="light"] .bg-gold-600\/20 {
+  background-color: rgba(255, 241, 0, 0.25) !important;
+}
+
+/* ── Card hover ──────────────────────────────────────────────────────────── */
+[data-theme="light"] .card-hover:hover {
+  border-color: #fff100 !important;
+  box-shadow: 0 10px 30px rgba(255, 241, 0, 0.2) !important;
+}
+
+/* ── SocialConstruct banner (bg-gold-600) ────────────────────────────────── */
+/* The ticker/banner section uses bg-gold-600 with text — ensure dark text  */
+[data-theme="light"] .bg-gold-600,
+[data-theme="dark"] .bg-gold-600 {
+  color: #111111 !important;
+}
+
+/* ── NavBar accent colour on yellow bg ───────────────────────────────────── */
+/* When nav accent is set to #fff100, text ON that element must be dark      */
+[style*="background-color: #fff100"] {
+  color: #111111 !important;
+}
+[style*="background: #fff100"] {
+  color: #111111 !important;
+}
+
+/* ── Light mode: hardcoded dark navy elements ────────────────────────────── */
+/* Some sections use hardcoded bg-navy-* which via CSS vars become white in  */
+/* light mode — their text-cream also flips to dark, so they're fine.        */
+/* But any child using text-white inside a now-white card needs fixing:      */
+[data-theme="light"] .bg-navy-800 .text-white,
+[data-theme="light"] .bg-navy-900 .text-white,
+[data-theme="light"] .bg-navy-950 .text-white {
+  color: #111111 !important;
+}
+
+/* ── Light mode: stat counter on yellow background ───────────────────────── */
+[data-theme="light"] .stat-counter-value {
+  color: #111111 !important;
+}
+
+/* ── Ensure hover:text-gold-* stays visible ─────────────────────────────── */
+/* In dark mode yellow hover is fine; in light mode flip to dark on hover   */
+[data-theme="light"] .hover\:text-gold-400:hover,
+[data-theme="light"] .hover\:text-gold-500:hover,
+[data-theme="light"] .hover\:text-gold-600:hover {
+  color: #1a1a1a !important;
+}
+
+/* ── Inline style yellow text: ensure it's readable ─────────────────────── */
+/* ContactPage and others use style={{ color: '#fff100' }} for icons on dark */
+/* backgrounds — in light mode those backgrounds flip to white, making       */
+/* yellow-on-white invisible. Fix: in light mode, yellow text → dark ink.   */
+[data-theme="light"] [style*="color: rgb(255, 241, 0)"],
+[data-theme="light"] [style*="color:#fff100"],
+[data-theme="light"] [style*="color: #fff100"] {
+  color: #111111 !important;
+}
+
+/* ── Yellow section: always dark text regardless of theme ─────────────────── */
+.yellow-section .stat-counter-value,
+.yellow-section [style*="color:"],
+.yellow-section span,
+.yellow-section p {
+  color: #111111 !important;
+}
+
+
+/* ── Group-hover yellow text fix ────────────────────────────────────────── */
+[data-theme="light"] .group-hover\:text-gold-400 {
+  color: inherit;
+}
+[data-theme="light"] .group:hover .group-hover\:text-gold-400 {
+  color: #1a1a1a !important;
+}
+
+/* ── Nav links: always respect their own inline colours ─────────────────── */
+/* The nav sits on a dark background in both modes, so active = yellow,      */
+/* inactive = white. Our light-mode overrides must NOT touch nav links.      */
+[data-theme="light"] [data-nav-link="active"] {
+  color: #fff100 !important;
+}
+[data-theme="light"] [data-nav-link="inactive"] {
+  color: #ffffff !important;
+}
+
+/* Mobile nav links stay gold when active in light mode too */
+[data-theme="light"] .text-gold-500 a,
+[data-theme="light"] nav .text-gold-500 {
+  color: #fff100 !important;
+}
+
+/* ── icon-on-dark: black pill with yellow icon, immune to theme overrides ── */
+/* Used for contact page icon badges and social buttons                       */
+.icon-on-dark {
+  background-color: #111111 !important;
+  color: #fff100 !important;
+}
+.icon-on-dark * {
+  color: #fff100 !important;
+}
+.icon-on-dark:hover {
+  background-color: #2a2a2a !important;
+}
