@@ -243,20 +243,22 @@ export default function SocialConstructPage() {
 
       {/* Platforms */}
       <section className="py-24 bg-navy-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
           <ScrollReveal>
-            <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-4">
-              Where to Find Us
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl text-cream mb-8">
-              Follow Social Construct
-            </h2>
-            <p className="text-slate-300 text-lg mb-16 leading-relaxed">
-              Find us on TikTok and Instagram for engaging, authentic content about careers in
-              the UK construction industry. Hit follow to stay updated with the latest videos,
-              interviews, and stories.
-            </p>
-            <div className="flex items-center justify-center gap-12">
+            <div className="w-full">
+              <p className="text-gold-500 text-xs uppercase tracking-widest font-medium mb-4">
+                Where to Find Us
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl text-cream mb-8">
+                Follow Social Construct
+              </h2>
+              <p className="text-slate-300 text-lg mb-16 leading-relaxed">
+                Find us on TikTok and Instagram for engaging, authentic content about careers in
+                the UK construction industry. Hit follow to stay updated with the latest videos,
+                interviews, and stories.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-12 w-full">
               <a
                 href="https://tiktok.com/@socialconstruct"
                 target="_blank"
