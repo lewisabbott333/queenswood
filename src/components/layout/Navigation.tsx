@@ -150,7 +150,7 @@ export default function Navigation() {
                 src="/images/logo-horizontal.svg"
                 alt="Queenswood Engagement"
                 className="h-7 w-auto transition-all duration-300"
-                style={{ filter: 'invert(1) sepia(1) hue-rotate(-10deg) saturate(2)' }}
+                style={{ filter: 'brightness(0%) saturate(100%) invert(82%) sepia(100%) hue-rotate(51deg)' }}
                 loading="eager"
               />
             </Link>
@@ -220,7 +220,7 @@ export default function Navigation() {
             src="/images/logo-horizontal.svg"
             alt="Queenswood Engagement"
             className="h-8 w-auto transition-all duration-300"
-            style={{ filter: 'invert(1) sepia(1) hue-rotate(-10deg) saturate(2)' }}
+            style={{ filter: 'brightness(0%) saturate(100%) invert(82%) sepia(100%) hue-rotate(51deg)' }}
           />
         </div>
 
