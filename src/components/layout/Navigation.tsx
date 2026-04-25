@@ -162,6 +162,7 @@ export default function Navigation() {
                   <li key={link.href}>
                     <Link
                       to={link.href}
+                      data-nav-link={isActive ? 'active' : 'inactive'}
                       className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 group`}
                       style={{
                         color: isActive
