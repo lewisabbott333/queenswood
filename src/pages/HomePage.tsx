@@ -182,7 +182,7 @@ export default function HomePage() {
         )}
         {/* Strong left-heavy gradient so text always reads clearly */}
         <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'linear-gradient(105deg, rgba(10,12,18,0.92) 0%, rgba(10,12,18,0.78) 45%, rgba(10,12,18,0.35) 75%, rgba(10,12,18,0.15) 100%)'
+          background: 'linear-gradient(105deg, rgba(45,45,45,0.92) 0%, rgba(45,45,45,0.78) 45%, rgba(45,45,45,0.35) 75%, rgba(45,45,45,0.15) 100%)'
         }} />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-950 pointer-events-none" />
 

@@ -132,7 +132,7 @@ export default function Navigation() {
         style={
           scrolled || theme === 'light'
             ? {
-                backgroundColor: navColors.bg || '#0a0c12',
+                backgroundColor: navColors.bg || '#2D2D2D',
                 backdropFilter: 'blur(12px)',
                 WebkitBackdropFilter: 'blur(12px)',
                 borderBottom: '1px solid rgba(255,255,255,0.08)',
