@@ -147,7 +147,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
-                src="/images/logo-horizontal.svg"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fddb7c4534e7c4009bade490fe79ac232?format=webp&width=800&height=1200"
                 alt="Queenswood Engagement"
                 className="h-7 w-auto transition-all duration-300"
                 loading="eager"
@@ -216,7 +216,7 @@ export default function Navigation() {
 
         <div className="mb-10">
           <img
-            src="/images/logo-horizontal.svg"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fddb7c4534e7c4009bade490fe79ac232?format=webp&width=800&height=1200"
             alt="Queenswood Engagement"
             className="h-8 w-auto transition-all duration-300"
           />
