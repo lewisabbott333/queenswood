@@ -166,7 +166,7 @@ export default function SocialConstructPage() {
               <div className="bg-navy-950 rounded-2xl p-8 border border-gold-600/20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-600/5 rounded-full blur-2xl" />
                 <div className="relative z-10">
-                  <div className="w-40 h-56 rounded-lg overflow-hidden mb-5 flex-shrink-0">
+                  <div className="w-64 h-96 rounded-lg overflow-hidden mb-5 flex-shrink-0">
                     {presenterImage ? (
                       <img
                         src={presenterImage}
