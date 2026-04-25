@@ -177,7 +177,7 @@ export default function ShopPage() {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-base px-10 py-4 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-base px-10 py-4 font-semibold transition-colors rounded-lg"
               style={{ backgroundColor: '#fff100', color: '#1a1a1a' }}
               onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#fff433')}
               onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#fff100')}
