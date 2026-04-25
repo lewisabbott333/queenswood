@@ -386,7 +386,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12" style={{ gap: '57px' }}>
             <ScrollReveal>
               <img
                 src="/images/66a0ccfb063ee14ea9deb873_3.webp"
