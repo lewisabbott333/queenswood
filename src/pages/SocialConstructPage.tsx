@@ -95,13 +95,12 @@ export default function SocialConstructPage() {
           <div className="inline-flex items-center gap-2 bg-gold-600/10 border border-gold-600/30 text-gold-400 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-6 font-medium">
             A Queenswood Initiative
           </div>
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl text-cream leading-tight mb-6">
-            Social{' '}
-            <span className="relative inline-block">
-              <span className="text-gold-500">Construct</span>
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gold-500 rounded-full" />
-            </span>
-          </h1>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F28115666c5234bdc96f3627fbdbd13d0?format=webp&width=800&height=1200"
+            alt="Social Construct Logo"
+            className="h-auto mb-6"
+            style={{ maxWidth: '500px', width: '100%' }}
+          />
           <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mt-8">
             A new initiative aimed at raising awareness of the opportunities and benefits for young
             people joining the UK construction industry.
