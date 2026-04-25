@@ -166,7 +166,7 @@ export default function SocialConstructPage() {
               <div className="bg-navy-950 rounded-2xl p-8 border border-gold-600/20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-600/5 rounded-full blur-2xl" />
                 <div className="relative z-10">
-                  <div className="w-full rounded-lg overflow-hidden mb-5" style={{ aspectRatio: '2/3', minHeight: '500px' }}>
+                  <div className="w-48 h-80 rounded-lg overflow-hidden mb-5 flex-shrink-0">
                     {presenterImage ? (
                       <img
                         src={presenterImage}
