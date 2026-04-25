@@ -191,19 +191,19 @@ export default function HomePage() {
             <h1 className="font-display font-bold" style={{ letterSpacing: '-0.025em', lineHeight: '1.05' }}>
               <span
                 className="hero-line block text-5xl md:text-6xl lg:text-7xl xl:text-8xl opacity-0"
-                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)' }}
+                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)', fontFamily: '__Inter_d65c78, sans-serif' }}
               >
                 Community &amp; Stakeholder
               </span>
               <span
                 className="hero-line block text-5xl md:text-6xl lg:text-7xl xl:text-8xl opacity-0 relative inline-block mt-2"
-                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)' }}
+                style={{ color: '#ffffff', textShadow: '0 2px 24px rgba(0,0,0,0.7)', fontFamily: 'Inter, sans-serif' }}
               >
                 Engagement Consultancy
                 <span
                   ref={underlineRef}
                   className="absolute -bottom-3 left-0 rounded-full origin-left block"
-                  style={{ transform: 'scaleX(0)', backgroundColor: '#fff100', height: '2px', width: '100%', lineHeight: '6px' }}
+                  style={{ transform: 'scaleX(0)', backgroundColor: '#fff100', height: '2px', width: '600px', lineHeight: '6px', alignSelf: 'stretch' }}
                 />
               </span>
             </h1>
