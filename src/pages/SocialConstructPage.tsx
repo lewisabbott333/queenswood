@@ -265,8 +265,8 @@ export default function SocialConstructPage() {
                 aria-label="Follow on TikTok"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F28115666c5234bdc96f3627fbdbd13d0?format=webp&width=800&height=1200"
-                  alt="Social Construct"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F40ba5980108749e2af5db6e5fb8557d1?format=webp&width=800&height=1200"
+                  alt="TikTok"
                   className="h-16 w-auto"
                 />
               </a>
@@ -278,8 +278,8 @@ export default function SocialConstructPage() {
                 aria-label="Follow on Instagram"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F28115666c5234bdc96f3627fbdbd13d0?format=webp&width=800&height=1200"
-                  alt="Social Construct"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2ff446a1a2f24b2eaab3e1af40ad525e?format=webp&width=800&height=1200"
+                  alt="Instagram"
                   className="h-16 w-auto"
                 />
               </a>
