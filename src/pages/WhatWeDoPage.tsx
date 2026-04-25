@@ -116,7 +116,7 @@ export default function WhatWeDoPage() {
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-32 items-center ${
                   !isEven ? 'lg:grid-flow-dense' : ''
                 }`}
               >
