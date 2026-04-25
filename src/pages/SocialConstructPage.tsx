@@ -93,7 +93,7 @@ export default function SocialConstructPage() {
         </div>
         <ScrollReveal>
           <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 bg-gold-600/10 border border-gold-600/30 text-gold-400 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-8 font-medium">
+            <div className="inline-flex items-center gap-2 bg-gold-600 text-navy-950 text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-8 font-medium">
               A Queenswood Initiative
             </div>
             <div className="flex justify-center mb-12">
