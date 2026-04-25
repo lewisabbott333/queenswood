@@ -256,34 +256,32 @@ export default function SocialConstructPage() {
               the UK construction industry. Hit follow to stay updated with the latest videos,
               interviews, and stories.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
+            <div className="flex items-center justify-center gap-12">
               <a
                 href="https://tiktok.com/@socialconstruct"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 p-8 rounded-2xl border border-gold-600/30 hover:border-gold-600 hover:bg-gold-600/5 transition-all duration-300 group"
+                className="hover:opacity-90 transition-all duration-300 group"
                 aria-label="Follow on TikTok"
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F40ba5980108749e2af5db6e5fb8557d1?format=webp&width=800&height=1200"
                   alt="TikTok"
-                  className="h-32 w-auto group-hover:scale-110 transition-transform duration-300"
+                  className="h-40 w-auto group-hover:scale-105 transition-transform duration-300"
                 />
-                <span className="text-gold-500 font-semibold text-lg">TikTok</span>
               </a>
               <a
                 href="https://instagram.com/socialconstruct"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 p-8 rounded-2xl border border-gold-600/30 hover:border-gold-600 hover:bg-gold-600/5 transition-all duration-300 group"
+                className="hover:opacity-90 transition-all duration-300 group"
                 aria-label="Follow on Instagram"
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2ff446a1a2f24b2eaab3e1af40ad525e?format=webp&width=800&height=1200"
                   alt="Instagram"
-                  className="h-32 w-auto group-hover:scale-110 transition-transform duration-300"
+                  className="h-40 w-auto group-hover:scale-105 transition-transform duration-300"
                 />
-                <span className="text-gold-500 font-semibold text-lg">Instagram</span>
               </a>
             </div>
           </ScrollReveal>
