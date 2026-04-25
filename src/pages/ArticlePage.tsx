@@ -333,7 +333,7 @@ export default function ArticlePage() {
       )}
 
       {/* Back link */}
-      <div className="max-w-3xl mx-auto px-6 lg:px-8 py-10">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8 py-10 flex justify-center">
         <Link
           to="/news-and-insights"
           className="inline-flex items-center gap-2 text-gold-500 text-sm hover:text-gold-400 transition-colors"
