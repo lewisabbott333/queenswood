@@ -131,19 +131,19 @@ export default function AboutUsPage() {
             <ScrollReveal from="right">
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#f8e71c' }}>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
                     <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>629k+</p>
                     <p className="text-sm" style={{ color: '#2D2D2D' }}>Stakeholders engaged across all projects</p>
                   </div>
-                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#f8e71c' }}>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
                     <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>10+</p>
                     <p className="text-sm" style={{ color: '#2D2D2D' }}>Active infrastructure projects</p>
                   </div>
-                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#f8e71c' }}>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
                     <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>2</p>
                     <p className="text-sm" style={{ color: '#2D2D2D' }}>Major industry awards won</p>
                   </div>
-                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#f8e71c' }}>
+                  <div className="rounded-xl p-6 border border-gold-600" style={{ backgroundColor: '#fff100' }}>
                     <p className="font-display text-4xl mb-2" style={{ color: '#2D2D2D' }}>100%</p>
                     <p className="text-sm" style={{ color: '#2D2D2D' }}>Infrastructure sector focus</p>
                   </div>
@@ -160,7 +160,7 @@ export default function AboutUsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/40 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <p className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: '#f8e71c' }}>Featured Project</p>
-                    <p className="text-sm font-medium text-white">SESRO — Oxford Water Project</p>
+                    <p className="text-sm font-medium text-white border border-slate-300 px-3 py-2 rounded">SESRO — Oxford Water Project</p>
                   </div>
                 </div>
               </div>
