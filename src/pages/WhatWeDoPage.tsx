@@ -40,7 +40,7 @@ const services = [
     title: 'Social Value',
     description:
       'Maximising community benefit and social impact from infrastructure investment. We develop Social Value Strategies, coordinate volunteering and skills programmes, monitor and report on social value outcomes, and help clients meet their social value commitments to funders, investors, and regulators.',
-    image: '/images/services/service-6.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F95d5dcfa93df48af83a0b9a94cd395cf?format=webp&width=800&height=1200',
   },
 ];
 
