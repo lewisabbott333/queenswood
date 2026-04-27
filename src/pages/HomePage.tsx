@@ -265,7 +265,7 @@ export default function HomePage() {
             <div className="relative rounded-2xl overflow-hidden bg-navy-900 border border-navy-800 shadow-2xl shadow-black/50">
               <div className="aspect-video w-full">
                 <iframe
-                  src="https://streamable.com/e/g6vlpa"
+                  src="https://streamable.com/e/h7hrs3"
                   title="Queenswood Engagement — who we are and how we work"
                   allow="fullscreen; autoplay"
                   allowFullScreen
