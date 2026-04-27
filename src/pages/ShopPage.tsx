@@ -66,9 +66,9 @@ export default function ShopPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'Engagement Shop | Visual Communication Services | Queenswood',
+      title: 'Engagement Visualisation Shop | Infrastructure Graphics & Animations | Queenswood',
       description:
-        "Queenswood's Engagement Shop offers visual communication and engagement planning services — road work visualisations, construction graphics, noise animations, exhibition materials, and more.",
+        'Order bespoke visual communication services for infrastructure projects — road work visualisations, construction animations, noise impact graphics, exhibition materials and engagement plans.',
       canonical: `${SITE_URL}/shop`,
       keywords: 'engagement shop, road work visualisations, construction graphics, noise impact animations, exhibition graphics, engagement planning services UK',
       structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Engagement Shop', url: '/shop' }])],

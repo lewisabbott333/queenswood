@@ -66,9 +66,9 @@ export default function SocialConstructPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'Social Construct | Young People in Construction | Queenswood Initiative',
+      title: 'Social Construct | Careers in Construction for Young People | Queenswood',
       description:
-        'Social Construct is a Queenswood initiative raising awareness of opportunities for young people in the UK construction industry, through engaging content with presenter Alex Teniola.',
+        'Social Construct is Queenswood\'s initiative inspiring the next generation into construction and infrastructure careers. Authentic content, real stories and career guidance for young people across the UK.',
       canonical: `${SITE_URL}/social-construct`,
       keywords: 'Social Construct, young people in construction, construction careers UK, infrastructure careers, diverse talent construction, Alex Teniola',
       structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Social Construct', url: '/social-construct' }])],

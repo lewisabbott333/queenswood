@@ -93,9 +93,9 @@ export default function OurWorkPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'Our Work | Infrastructure Engagement Case Studies | Queenswood',
+      title: 'Infrastructure Engagement Case Studies | HS2, National Highways, Thames Water | Queenswood',
       description:
-        'Explore Queenswood\'s portfolio of community and stakeholder engagement case studies across major UK infrastructure projects including HS2, National Highways, and Thames Water.',
+        'Explore our community and stakeholder engagement case studies across major UK infrastructure — HS2 Phase 1 & 2, Lower Thames Crossing, Thames Water SESRO, National Highways and more.',
       canonical: `${SITE_URL}/our-work`,
       keywords: 'engagement case studies, infrastructure projects, HS2 engagement, National Highways, Thames Water, Crossrail stakeholder, community engagement portfolio',
       structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Our Work', url: '/our-work' }])],
@@ -116,12 +116,14 @@ export default function OurWorkPage() {
             Road Smoothers
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-cream leading-tight mb-6">
-            Our Work
+            Infrastructure Engagement Case Studies
           </h1>
           <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            From flagship national programmes to local transport improvements, we have built a
-            track record of delivering outstanding engagement on the UK's most complex and
-            sensitive infrastructure projects.
+            From major national programmes like HS2 and the Lower Thames Crossing to water
+            infrastructure and local transport schemes, Queenswood has a proven track record of
+            delivering award-winning community and stakeholder engagement on the UK's most
+            complex and sensitive infrastructure projects — including DCO, National Highways,
+            and Thames Water programmes.
           </p>
         </div>
       </section>
@@ -198,10 +200,12 @@ export default function OurWorkPage() {
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl text-cream mb-6">
-              Working on something big?
+              Looking for an experienced community engagement consultancy?
             </h2>
             <p className="text-slate-400 mb-8">
-              Tell us about your project and we'll show you how Queenswood can make the difference.
+              Whether you're preparing a DCO application, managing a National Highways scheme, or
+              building trust with communities on a water infrastructure project — Queenswood can
+              make the difference. Tell us about your programme.
             </p>
             <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
               Get in Touch <ArrowRight size={16} />

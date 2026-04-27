@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Linkedin } from '@/components/ui/MaterialIcon';
 import { supabase } from '@/lib/supabase';
 import type { TeamMember } from '@/lib/supabase';
-import { setPageSEO, SITE_URL, organizationSchema, breadcrumbSchema } from '@/lib/seo';
+import { setPageSEO, SITE_URL, organizationSchema, breadcrumbSchema, personSchema, truncateBio } from '@/lib/seo';
 
 const getInitials = (name: string) =>
   name
@@ -32,7 +32,7 @@ export default function TeamMemberPage() {
         setLoading(false);
         if (data) {
           const desc = data.bio
-            ? data.bio.slice(0, 155)
+            ? truncateBio(data.bio, 155)
             : `Meet ${data.name}, ${data.role} at Queenswood Engagement — specialist community and stakeholder engagement consultancy.`;
           setPageSEO({
             title: `${data.name} | ${data.role} | Queenswood Engagement`,
@@ -47,6 +47,14 @@ export default function TeamMemberPage() {
                 { name: 'About Us', url: '/about-us' },
                 { name: data.name, url: `/team/${slug}` },
               ]),
+              personSchema({
+                name: data.name,
+                role: data.role,
+                bio: data.bio,
+                imageUrl: data.image_url,
+                linkedinUrl: data.linkedin_url,
+                slug: slug!,
+              }),
             ],
           });
         }

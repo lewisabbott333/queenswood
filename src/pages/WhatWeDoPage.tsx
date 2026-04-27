@@ -3,44 +3,44 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ArrowRight } from '@/components/ui/MaterialIcon';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { setPageSEO, SITE_URL, organizationSchema } from '@/lib/seo';
+import { setPageSEO, SITE_URL, organizationSchema, breadcrumbSchema, faqPageSchema, serviceSchema } from '@/lib/seo';
 
 const services = [
   {
     title: 'Community Engagement',
     description:
       'We connect infrastructure projects with local communities, building relationships built on trust and transparency. Our team brings genuine care and local insight to every project, ensuring communities feel heard and respected throughout the development process. From public information events to door-to-door engagement, we craft approaches that resonate with real people.',
-    image: '/images/services/service-1.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2837ea8672e24da0abb3acc56f30bf30?format=webp&width=800&height=1200',
   },
   {
     title: 'Stakeholder Engagement',
     description:
       'Expert management of complex multi-stakeholder environments, navigating competing interests with skill and sensitivity. We map stakeholder landscapes, identify key influencers, and develop tailored communication strategies that build confidence and consensus. Our consultants are experienced in dealing with elected officials, local authorities, landowners, and campaign groups.',
-    image: '/images/services/service-2.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F29e8645ab0814ea9804d7ee19637f550?format=webp&width=800&height=1200',
   },
   {
     title: 'Digital & Visual Storytelling',
     description:
       'Bringing complex infrastructure information to life through compelling visual content. We create animated explainer videos, interactive maps, digital engagement portals, CGI visualisations, and infographics that make technical information accessible to all audiences. Great visual communication reduces fear and builds understanding.',
-    image: '/images/services/service-3.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F16e068a4086e4465a5f1ad3c75b30af8?format=webp&width=800&height=1200',
   },
   {
     title: 'Public Consultation',
     description:
       'Rigorous, inclusive consultation processes that exceed regulatory requirements. We design and deliver public consultation events, online surveys, accessible exhibitions, and statutory processes that ensure all voices are heard. Our consultation reports stand up to regulatory scrutiny and demonstrate genuine public engagement.',
-    image: '/images/services/service-4.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F78b5bd8373b547d098815b39d7dfd5b9?format=webp&width=800&height=1200',
   },
   {
     title: 'Agricultural Liaison',
     description:
       'Specialist engagement with landowners and farming communities across major linear schemes. Our agricultural liaison officers understand the pressures on farming businesses and work sensitively to minimise disruption, facilitate access, and maintain productive relationships throughout construction and beyond.',
-    image: '/images/services/service-5.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Ffa265bcbe95c480da8b530bcd9077e2c?format=webp&width=800&height=1200',
   },
   {
     title: 'Social Value',
     description:
       'Maximising community benefit and social impact from infrastructure investment. We develop Social Value Strategies, coordinate volunteering and skills programmes, monitor and report on social value outcomes, and help clients meet their social value commitments to funders, investors, and regulators.',
-    image: '/images/services/service-6.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F95d5dcfa93df48af83a0b9a94cd395cf?format=webp&width=800&height=1200',
   },
 ];
 
@@ -77,12 +77,17 @@ export default function WhatWeDoPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'What We Do | Community & Stakeholder Engagement | Queenswood',
+      title: 'Stakeholder Engagement Services UK | Community Engagement Consultancy | Queenswood',
       description:
-        'Queenswood delivers expert stakeholder engagement for UK infrastructure projects. Community engagement, public consultation, agricultural liaison, digital storytelling and more.',
+        'Specialist stakeholder and community engagement services for UK infrastructure projects. Public consultation, agricultural liaison, digital storytelling, social value and more. Trusted by HS2, National Highways and Thames Water.',
       canonical: `${SITE_URL}/what-we-do`,
       keywords: 'community engagement services, stakeholder management, public consultation UK, agricultural liaison, digital engagement, social value infrastructure',
-      structuredData: [organizationSchema],
+      structuredData: [
+        organizationSchema,
+        breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'What We Do', url: '/what-we-do' }]),
+        faqPageSchema(faqs),
+        ...services.map((s) => serviceSchema({ name: s.title, description: s.description.slice(0, 200), url: '/what-we-do' })),
+      ],
     });
   }, []);
 
@@ -98,10 +103,10 @@ export default function WhatWeDoPage() {
             Expert Engagement Across the Built Environment
           </h1>
           <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Our experienced team of specialists pride themselves on knowledge, flexibility, and
-            passion for the built environment. Respected within construction circles and the
-            communities we work in, we know what it takes to build trust and understanding with
-            local people and stakeholders.
+            Queenswood is a specialist community and stakeholder engagement consultancy working
+            exclusively on UK infrastructure projects. From HS2 to National Highways and Thames
+            Water, our experienced team builds trust between major programmes and the communities
+            they affect — delivering engagement that is genuine, effective, and award-winning.
           </p>
         </div>
       </section>
@@ -145,7 +150,7 @@ export default function WhatWeDoPage() {
                     <span className="text-gold-500 text-xs uppercase tracking-[0.2em] font-medium">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <h2 className="font-display text-3xl md:text-4xl text-cream">{service.title}</h2>
+                    <h2 className="font-display text-3xl md:text-4xl text-cream">{service.title} Services</h2>
                     <p className="text-slate-400 text-base md:text-lg leading-relaxed">
                       {service.description}
                     </p>

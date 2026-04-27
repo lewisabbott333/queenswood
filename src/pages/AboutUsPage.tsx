@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Lightbulb, Handshake, Quote } from '@/components/ui/MaterialIcon';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { setPageSEO, SITE_URL, organizationSchema } from '@/lib/seo';
+import { setPageSEO, SITE_URL, organizationSchema, breadcrumbSchema } from '@/lib/seo';
 import { supabase } from '@/lib/supabase';
 import type { TeamMember } from '@/lib/supabase';
 
@@ -51,12 +51,12 @@ export default function AboutUsPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'About Us | Queenswood Engagement | Infrastructure Consultancy',
+      title: 'About Queenswood | Award-Winning Infrastructure Engagement Consultancy UK',
       description:
-        'Meet the Queenswood team — specialist community and stakeholder engagement consultants with experience across HS2, National Highways, Crossrail, and Thames Water programmes.',
+        'Meet the Queenswood team — award-winning community and stakeholder engagement specialists with a proven track record on HS2, National Highways, Crossrail, Thames Water and more.',
       canonical: `${SITE_URL}/about-us`,
-      keywords: 'Queenswood team, about Queenswood, community engagement consultancy, infrastructure specialists, stakeholder engagement experts',
-      structuredData: [organizationSchema],
+      keywords: 'about Queenswood, Queenswood team, infrastructure engagement consultancy, award-winning engagement, community engagement specialists UK',
+      structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'About Us', url: '/about-us' }])],
     });
 
     supabase
@@ -81,12 +81,12 @@ export default function AboutUsPage() {
               Peace Keepers
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-cream leading-tight mb-8">
-              About Queenswood
+              Award-Winning Infrastructure Engagement Consultancy
             </h1>
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12">
-              We are Queenswood and we strive to build happier communities and deliver projects
-              successfully. We are a specialist community and stakeholder engagement consultancy
-              working exclusively within the infrastructure sector.
+              We are Queenswood — a specialist community and stakeholder engagement consultancy
+              working exclusively within the UK infrastructure sector. We build social licence to
+              operate, earn trust in the built environment, and help major programmes succeed.
             </p>
           </div>
 
@@ -151,17 +151,14 @@ export default function AboutUsPage() {
 
                 {/* Featured project image */}
                 <div className="relative rounded-2xl overflow-hidden border border-navy-800 aspect-video">
-                  <img
-                    src="/images/projects/sesro-cgi.jpg"
-                    alt="Queenswood on site at a major infrastructure project"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
+                  <iframe
+                    src="https://streamable.com/e/26ca2g"
+                    title="Featured Project — SESRO Oxford Water Project"
+                    allow="fullscreen; autoplay"
+                    allowFullScreen
+                    className="w-full h-full"
+                    style={{ border: 'none', display: 'block' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/40 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: '#f8e71c' }}>Featured Project</p>
-                    <p className="text-sm font-medium text-white">SESRO — Oxford Water Project</p>
-                  </div>
                 </div>
               </div>
             </ScrollReveal>
@@ -256,26 +253,26 @@ export default function AboutUsPage() {
               align="center"
             />
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <ScrollReveal>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <ScrollReveal className="flex-1 flex items-center justify-center">
               <img
-                src="/images/66a0ccfb063ee14ea9deb873_3.webp"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F45793e580be94605afaa31ddef2989fc?format=webp&width=800&height=1200"
                 alt="2023 Workforce CN Awards Winner"
-                className="h-40 md:h-48 object-contain"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
               />
             </ScrollReveal>
-            <ScrollReveal delay={0.1}>
+            <ScrollReveal delay={0.1} className="flex-1 flex items-center justify-center">
               <img
-                src="/images/66a0cd0a9d071d4b7f7c299c_2.webp"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fe6d9a309ac0842fb985ad46c21d87ec1?format=webp&width=800&height=1200"
                 alt="HS2 Inspiration Awards"
-                className="h-40 md:h-48 object-contain"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
               />
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
+            <ScrollReveal delay={0.2} className="flex-1 flex items-center justify-center">
               <img
-                src="/images/66a0cd1574d8c45d90910d2c_1.webp"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F99995b73e05d4f0d83c554f2099fc850?format=webp&width=800&height=1200"
                 alt="Digital Construction Awards Winner Digital Consultancy of the year 2024"
-                className="h-40 md:h-48 object-contain"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
               />
             </ScrollReveal>
           </div>

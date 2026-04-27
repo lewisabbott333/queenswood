@@ -131,9 +131,9 @@ export default function HomePage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'Queenswood Engagement | Community & Stakeholder Engagement Consultancy UK',
+      title: 'Community & Stakeholder Engagement Consultancy UK | Queenswood',
       description:
-        'Queenswood is a specialist community and stakeholder engagement consultancy working exclusively within the UK infrastructure sector — HS2, National Highways, Thames Water, Crossrail and more.',
+        'Award-winning community and stakeholder engagement consultancy for UK infrastructure — HS2, National Highways, Thames Water, Lower Thames Crossing and more. Building trust between projects and communities.',
       canonical: SITE_URL,
       ogType: 'website',
       keywords: 'community engagement consultancy UK, stakeholder engagement infrastructure, public consultation, HS2 community engagement, National Highways engagement, social value infrastructure',
@@ -249,6 +249,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* INTRO PARAGRAPH — keyword-rich for SEO */}
+      <section className="py-16 bg-navy-950">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-slate-300 text-lg leading-relaxed">
+            Queenswood is the UK's specialist <strong className="text-white font-medium">community and stakeholder engagement consultancy</strong> working exclusively on infrastructure projects. From{' '}
+            <strong className="text-white font-medium">HS2</strong> and{' '}
+            <strong className="text-white font-medium">National Highways</strong> to{' '}
+            <strong className="text-white font-medium">Thames Water</strong> and the{' '}
+            <strong className="text-white font-medium">Lower Thames Crossing</strong>, we deliver award-winning public consultation, agricultural liaison, digital storytelling and social value programmes that earn social licence to operate across the built environment.
+          </p>
+        </div>
+      </section>
+
       {/* VIDEO SECTION */}
       <section className="section-container bg-navy-950">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -265,7 +278,7 @@ export default function HomePage() {
             <div className="relative rounded-2xl overflow-hidden bg-navy-900 border border-navy-800 shadow-2xl shadow-black/50">
               <div className="aspect-video w-full">
                 <iframe
-                  src="https://streamable.com/e/g6vlpa"
+                  src="https://streamable.com/e/h7hrs3"
                   title="Queenswood Engagement — who we are and how we work"
                   allow="fullscreen; autoplay"
                   allowFullScreen
@@ -378,34 +391,26 @@ export default function HomePage() {
       {/* AWARDS */}
       <section className="section-container bg-navy-900">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-16">
-            <SectionHeader
-              strapline="Recognition"
-              heading="Award-Winning Engagement"
-              align="center"
-            />
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12" style={{ gap: '57px' }}>
-            <ScrollReveal>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <ScrollReveal className="flex-1 flex items-center justify-center">
               <img
-                src="/images/66a0ccfb063ee14ea9deb873_3.webp"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F45793e580be94605afaa31ddef2989fc?format=webp&width=800&height=1200"
                 alt="2023 Workforce CN Awards Winner"
-                className="h-32 md:h-40 object-contain"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
               />
             </ScrollReveal>
-            <ScrollReveal delay={0.1}>
+            <ScrollReveal delay={0.1} className="flex-1 flex items-center justify-center">
               <img
-                src="/images/66a0cd0a9d071d4b7f7c299c_2.webp"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fe6d9a309ac0842fb985ad46c21d87ec1?format=webp&width=800&height=1200"
                 alt="HS2 Inspiration Awards"
-                className="h-32 md:h-40 object-contain"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
               />
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
+            <ScrollReveal delay={0.2} className="flex-1 flex items-center justify-center">
               <img
-                src="/images/66a0cd1574d8c45d90910d2c_1.webp"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F99995b73e05d4f0d83c554f2099fc850?format=webp&width=800&height=1200"
                 alt="Digital Construction Awards Winner Digital Consultancy of the year 2024"
-                className="h-32 md:h-40 object-contain"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
               />
             </ScrollReveal>
           </div>

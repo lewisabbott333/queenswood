@@ -40,9 +40,9 @@ export default function NewsPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'News & Insights | Stakeholder Engagement Thought Leadership | Queenswood',
+      title: 'Stakeholder Engagement Insights & News | Infrastructure Thought Leadership | Queenswood',
       description:
-        'Thought leadership, industry insights, and news from Queenswood — the UK\'s leading community and stakeholder engagement consultancy for infrastructure projects.',
+        'Expert insights, news and thought leadership on community and stakeholder engagement for UK infrastructure. Stay ahead with Queenswood — specialist engagement consultants.',
       canonical: `${SITE_URL}/news-and-insights`,
       keywords: 'stakeholder engagement insights, community engagement news, infrastructure thought leadership, public consultation blog',
       structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'News & Insights', url: '/news-and-insights' }])],

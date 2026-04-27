@@ -50,9 +50,9 @@ export default function CareersPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'Careers | Join Queenswood Engagement | Infrastructure Consultancy Jobs UK',
+      title: 'Infrastructure Engagement Jobs UK | Community Engagement Careers | Queenswood',
       description:
-        'Join the Queenswood team — specialist community and stakeholder engagement consultants. We\'re always looking for passionate people who care about communities and infrastructure.',
+        'Build your career in community and stakeholder engagement on the UK\'s most significant infrastructure projects. Join Queenswood — specialist engagement consultants working on HS2, National Highways and more.',
       canonical: `${SITE_URL}/careers`,
       keywords: 'jobs at Queenswood, engagement consultancy jobs, infrastructure jobs UK, community engagement careers, stakeholder engagement roles',
       structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Careers', url: '/careers' }])],
