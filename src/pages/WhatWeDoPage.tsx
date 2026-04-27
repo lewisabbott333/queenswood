@@ -16,7 +16,7 @@ const services = [
     title: 'Stakeholder Engagement',
     description:
       'Expert management of complex multi-stakeholder environments, navigating competing interests with skill and sensitivity. We map stakeholder landscapes, identify key influencers, and develop tailored communication strategies that build confidence and consensus. Our consultants are experienced in dealing with elected officials, local authorities, landowners, and campaign groups.',
-    image: '/images/services/service-2.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F29e8645ab0814ea9804d7ee19637f550?format=webp&width=800&height=1200',
   },
   {
     title: 'Digital & Visual Storytelling',
