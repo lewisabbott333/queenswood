@@ -10,7 +10,7 @@ const services = [
     title: 'Community Engagement',
     description:
       'We connect infrastructure projects with local communities, building relationships built on trust and transparency. Our team brings genuine care and local insight to every project, ensuring communities feel heard and respected throughout the development process. From public information events to door-to-door engagement, we craft approaches that resonate with real people.',
-    image: '/images/services/service-1.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F2837ea8672e24da0abb3acc56f30bf30?format=webp&width=800&height=1200',
   },
   {
     title: 'Stakeholder Engagement',
