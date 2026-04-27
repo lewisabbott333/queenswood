@@ -378,14 +378,6 @@ export default function HomePage() {
       {/* AWARDS */}
       <section className="section-container bg-navy-900">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-16">
-            <SectionHeader
-              strapline="Recognition"
-              heading="Award-Winning Engagement"
-              align="center"
-            />
-          </div>
-
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <ScrollReveal className="flex-1 flex items-center justify-center">
               <img
