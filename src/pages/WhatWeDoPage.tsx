@@ -22,7 +22,7 @@ const services = [
     title: 'Digital & Visual Storytelling',
     description:
       'Bringing complex infrastructure information to life through compelling visual content. We create animated explainer videos, interactive maps, digital engagement portals, CGI visualisations, and infographics that make technical information accessible to all audiences. Great visual communication reduces fear and builds understanding.',
-    image: '/images/services/service-3.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F16e068a4086e4465a5f1ad3c75b30af8?format=webp&width=800&height=1200',
   },
   {
     title: 'Public Consultation',
