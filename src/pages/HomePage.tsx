@@ -391,21 +391,21 @@ export default function HomePage() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F45793e580be94605afaa31ddef2989fc?format=webp&width=800&height=1200"
                 alt="2023 Workforce CN Awards Winner"
-                className="h-96 md:h-[480px] object-contain w-[576px] md:w-[672px]"
+                className="h-64 md:h-80 object-contain w-96 md:w-[448px]"
               />
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fe6d9a309ac0842fb985ad46c21d87ec1?format=webp&width=800&height=1200"
                 alt="HS2 Inspiration Awards"
-                className="h-96 md:h-[480px] object-contain w-[576px] md:w-[672px]"
+                className="h-64 md:h-80 object-contain w-96 md:w-[448px]"
               />
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F99995b73e05d4f0d83c554f2099fc850?format=webp&width=800&height=1200"
                 alt="Digital Construction Awards Winner Digital Consultancy of the year 2024"
-                className="h-96 md:h-[480px] object-contain w-[576px] md:w-[672px]"
+                className="h-64 md:h-80 object-contain w-96 md:w-[448px]"
               />
             </ScrollReveal>
           </div>
