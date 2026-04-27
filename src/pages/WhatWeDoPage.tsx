@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ArrowRight } from '@/components/ui/MaterialIcon';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { setPageSEO, SITE_URL, organizationSchema } from '@/lib/seo';
+import { setPageSEO, SITE_URL, organizationSchema, breadcrumbSchema, faqPageSchema, serviceSchema } from '@/lib/seo';
 
 const services = [
   {
@@ -77,12 +77,17 @@ export default function WhatWeDoPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'What We Do | Community & Stakeholder Engagement | Queenswood',
+      title: 'Stakeholder Engagement Services UK | Community Engagement Consultancy | Queenswood',
       description:
-        'Queenswood delivers expert stakeholder engagement for UK infrastructure projects. Community engagement, public consultation, agricultural liaison, digital storytelling and more.',
+        'Specialist stakeholder and community engagement services for UK infrastructure projects. Public consultation, agricultural liaison, digital storytelling, social value and more. Trusted by HS2, National Highways and Thames Water.',
       canonical: `${SITE_URL}/what-we-do`,
       keywords: 'community engagement services, stakeholder management, public consultation UK, agricultural liaison, digital engagement, social value infrastructure',
-      structuredData: [organizationSchema],
+      structuredData: [
+        organizationSchema,
+        breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'What We Do', url: '/what-we-do' }]),
+        faqPageSchema(faqs),
+        ...services.map((s) => serviceSchema({ name: s.title, description: s.description.slice(0, 200), url: '/what-we-do' })),
+      ],
     });
   }, []);
 
@@ -98,10 +103,10 @@ export default function WhatWeDoPage() {
             Expert Engagement Across the Built Environment
           </h1>
           <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Our experienced team of specialists pride themselves on knowledge, flexibility, and
-            passion for the built environment. Respected within construction circles and the
-            communities we work in, we know what it takes to build trust and understanding with
-            local people and stakeholders.
+            Queenswood is a specialist community and stakeholder engagement consultancy working
+            exclusively on UK infrastructure projects. From HS2 to National Highways and Thames
+            Water, our experienced team builds trust between major programmes and the communities
+            they affect — delivering engagement that is genuine, effective, and award-winning.
           </p>
         </div>
       </section>
@@ -145,7 +150,7 @@ export default function WhatWeDoPage() {
                     <span className="text-gold-500 text-xs uppercase tracking-[0.2em] font-medium">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <h2 className="font-display text-3xl md:text-4xl text-cream">{service.title}</h2>
+                    <h2 className="font-display text-3xl md:text-4xl text-cream">{service.title} Services</h2>
                     <p className="text-slate-400 text-base md:text-lg leading-relaxed">
                       {service.description}
                     </p>

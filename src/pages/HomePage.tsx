@@ -131,9 +131,9 @@ export default function HomePage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'Queenswood Engagement | Community & Stakeholder Engagement Consultancy UK',
+      title: 'Community & Stakeholder Engagement Consultancy UK | Queenswood',
       description:
-        'Queenswood is a specialist community and stakeholder engagement consultancy working exclusively within the UK infrastructure sector — HS2, National Highways, Thames Water, Crossrail and more.',
+        'Award-winning community and stakeholder engagement consultancy for UK infrastructure — HS2, National Highways, Thames Water, Lower Thames Crossing and more. Building trust between projects and communities.',
       canonical: SITE_URL,
       ogType: 'website',
       keywords: 'community engagement consultancy UK, stakeholder engagement infrastructure, public consultation, HS2 community engagement, National Highways engagement, social value infrastructure',
@@ -246,6 +246,19 @@ export default function HomePage() {
             <StatCounter value="10+" label="Active Projects" />
             <StatCounter value="2" label="Major Industry Awards" />
           </div>
+        </div>
+      </section>
+
+      {/* INTRO PARAGRAPH — keyword-rich for SEO */}
+      <section className="py-16 bg-navy-950">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-slate-300 text-lg leading-relaxed">
+            Queenswood is the UK's specialist <strong className="text-white font-medium">community and stakeholder engagement consultancy</strong> working exclusively on infrastructure projects. From{' '}
+            <strong className="text-white font-medium">HS2</strong> and{' '}
+            <strong className="text-white font-medium">National Highways</strong> to{' '}
+            <strong className="text-white font-medium">Thames Water</strong> and the{' '}
+            <strong className="text-white font-medium">Lower Thames Crossing</strong>, we deliver award-winning public consultation, agricultural liaison, digital storytelling and social value programmes that earn social licence to operate across the built environment.
+          </p>
         </div>
       </section>
 

@@ -158,22 +158,6 @@ export default function CaseStudyPage() {
       ],
     });
 
-    if (title && description) {
-      const ldScript = document.querySelector('script[id="article-ld"]') as HTMLScriptElement | null;
-      const script = ldScript ?? document.createElement('script');
-      script.type = 'application/ld+json';
-      script.id = 'article-ld';
-      script.textContent = JSON.stringify(
-        articleSchema({
-          headline: title,
-          description,
-          image,
-          datePublished: caseStudy?.published_at ?? new Date().toISOString(),
-          url: `https://wearequeenswood.com/our-work/${slug}`,
-        })
-      );
-      if (!ldScript) document.head.appendChild(script);
-    }
   }, [caseStudy, staticItem, slug]);
 
   if (loading) {

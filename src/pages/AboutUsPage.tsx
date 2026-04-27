@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Lightbulb, Handshake, Quote } from '@/components/ui/MaterialIcon';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { setPageSEO, SITE_URL, organizationSchema } from '@/lib/seo';
+import { setPageSEO, SITE_URL, organizationSchema, breadcrumbSchema } from '@/lib/seo';
 import { supabase } from '@/lib/supabase';
 import type { TeamMember } from '@/lib/supabase';
 
@@ -51,12 +51,12 @@ export default function AboutUsPage() {
 
   useEffect(() => {
     setPageSEO({
-      title: 'About Us | Queenswood Engagement | Infrastructure Consultancy',
+      title: 'About Queenswood | Award-Winning Infrastructure Engagement Consultancy UK',
       description:
-        'Meet the Queenswood team — specialist community and stakeholder engagement consultants with experience across HS2, National Highways, Crossrail, and Thames Water programmes.',
+        'Meet the Queenswood team — award-winning community and stakeholder engagement specialists with a proven track record on HS2, National Highways, Crossrail, Thames Water and more.',
       canonical: `${SITE_URL}/about-us`,
-      keywords: 'Queenswood team, about Queenswood, community engagement consultancy, infrastructure specialists, stakeholder engagement experts',
-      structuredData: [organizationSchema],
+      keywords: 'about Queenswood, Queenswood team, infrastructure engagement consultancy, award-winning engagement, community engagement specialists UK',
+      structuredData: [organizationSchema, breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'About Us', url: '/about-us' }])],
     });
 
     supabase
@@ -81,12 +81,12 @@ export default function AboutUsPage() {
               Peace Keepers
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-cream leading-tight mb-8">
-              About Queenswood
+              Award-Winning Infrastructure Engagement Consultancy
             </h1>
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12">
-              We are Queenswood and we strive to build happier communities and deliver projects
-              successfully. We are a specialist community and stakeholder engagement consultancy
-              working exclusively within the infrastructure sector.
+              We are Queenswood — a specialist community and stakeholder engagement consultancy
+              working exclusively within the UK infrastructure sector. We build social licence to
+              operate, earn trust in the built environment, and help major programmes succeed.
             </p>
           </div>
 

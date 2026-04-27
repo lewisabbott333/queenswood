@@ -312,6 +312,68 @@ export const jobPostingSchema = (job: {
   industry: 'Infrastructure Consulting',
 });
 
+export const faqPageSchema = (faqs: Array<{ question: string; answer: string }>) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+});
+
+export const personSchema = (person: {
+  name: string;
+  role: string;
+  bio?: string;
+  imageUrl?: string;
+  linkedinUrl?: string;
+  slug: string;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: person.name,
+  jobTitle: person.role,
+  description: person.bio,
+  image: person.imageUrl,
+  url: `${SITE_URL}/team/${person.slug}`,
+  sameAs: person.linkedinUrl ? [person.linkedinUrl] : [],
+  worksFor: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+});
+
+export const serviceSchema = (service: {
+  name: string;
+  description: string;
+  url: string;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  description: service.description,
+  url: `${SITE_URL}${service.url}`,
+  provider: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  serviceType: service.name,
+});
+
+export const truncateBio = (bio: string, maxLength = 155): string => {
+  if (!bio || bio.length <= maxLength) return bio;
+  const trimmed = bio.slice(0, maxLength);
+  const lastSpace = trimmed.lastIndexOf(' ');
+  return lastSpace > 0 ? trimmed.slice(0, lastSpace) + '…' : trimmed + '…';
+};
+
 export const caseStudySchema = (cs: {
   headline: string;
   description: string;
