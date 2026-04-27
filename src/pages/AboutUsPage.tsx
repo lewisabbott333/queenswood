@@ -159,11 +159,6 @@ export default function AboutUsPage() {
                     className="w-full h-full"
                     style={{ border: 'none', display: 'block' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/40 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: '#f8e71c' }}>Featured Project</p>
-                    <p className="text-sm font-medium text-white">SESRO — Oxford Water Project</p>
-                  </div>
                 </div>
               </div>
             </ScrollReveal>
