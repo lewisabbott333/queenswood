@@ -34,7 +34,7 @@ const services = [
     title: 'Agricultural Liaison',
     description:
       'Specialist engagement with landowners and farming communities across major linear schemes. Our agricultural liaison officers understand the pressures on farming businesses and work sensitively to minimise disruption, facilitate access, and maintain productive relationships throughout construction and beyond.',
-    image: '/images/services/service-5.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Ffa265bcbe95c480da8b530bcd9077e2c?format=webp&width=800&height=1200',
   },
   {
     title: 'Social Value',
