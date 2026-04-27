@@ -391,21 +391,21 @@ export default function HomePage() {
               <img
                 src="/images/66a0ccfb063ee14ea9deb873_3.webp"
                 alt="2023 Workforce CN Awards Winner"
-                className="h-32 md:h-40 object-contain"
+                className="h-32 md:h-40 object-contain w-48 md:w-56"
               />
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <img
                 src="/images/66a0cd0a9d071d4b7f7c299c_2.webp"
                 alt="HS2 Inspiration Awards"
-                className="h-32 md:h-40 object-contain"
+                className="h-32 md:h-40 object-contain w-48 md:w-56"
               />
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <img
                 src="/images/66a0cd1574d8c45d90910d2c_1.webp"
                 alt="Digital Construction Awards Winner Digital Consultancy of the year 2024"
-                className="h-32 md:h-40 object-contain"
+                className="h-32 md:h-40 object-contain w-48 md:w-56"
               />
             </ScrollReveal>
           </div>
