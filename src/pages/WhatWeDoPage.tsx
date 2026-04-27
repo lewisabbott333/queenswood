@@ -28,7 +28,7 @@ const services = [
     title: 'Public Consultation',
     description:
       'Rigorous, inclusive consultation processes that exceed regulatory requirements. We design and deliver public consultation events, online surveys, accessible exhibitions, and statutory processes that ensure all voices are heard. Our consultation reports stand up to regulatory scrutiny and demonstrate genuine public engagement.',
-    image: '/images/services/service-4.jpg',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F78b5bd8373b547d098815b39d7dfd5b9?format=webp&width=800&height=1200',
   },
   {
     title: 'Agricultural Liaison',
