@@ -386,33 +386,27 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-center">
-            <ScrollReveal>
-              <div className="h-64 flex items-center justify-center">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F45793e580be94605afaa31ddef2989fc?format=webp&width=800&height=1200"
-                  alt="2023 Workforce CN Awards Winner"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <ScrollReveal className="flex-1 flex items-center justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F45793e580be94605afaa31ddef2989fc?format=webp&width=800&height=1200"
+                alt="2023 Workforce CN Awards Winner"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
+              />
             </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <div className="h-64 flex items-center justify-center">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fe6d9a309ac0842fb985ad46c21d87ec1?format=webp&width=800&height=1200"
-                  alt="HS2 Inspiration Awards"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+            <ScrollReveal delay={0.1} className="flex-1 flex items-center justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2Fe6d9a309ac0842fb985ad46c21d87ec1?format=webp&width=800&height=1200"
+                alt="HS2 Inspiration Awards"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
+              />
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <div className="h-64 flex items-center justify-center">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F99995b73e05d4f0d83c554f2099fc850?format=webp&width=800&height=1200"
-                  alt="Digital Construction Awards Winner Digital Consultancy of the year 2024"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+            <ScrollReveal delay={0.2} className="flex-1 flex items-center justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fea419fe473b04c6393d84a56c2da1348%2F99995b73e05d4f0d83c554f2099fc850?format=webp&width=800&height=1200"
+                alt="Digital Construction Awards Winner Digital Consultancy of the year 2024"
+                style={{ height: '200px', width: '100%', objectFit: 'contain' }}
+              />
             </ScrollReveal>
           </div>
         </div>
